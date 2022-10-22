@@ -26,6 +26,7 @@ describe TwitterClient::TweetComplianceStreamResponse do
 
   describe '.build' do
     it 'returns the correct model' do
+      # assertion here
     end
   end
 end
