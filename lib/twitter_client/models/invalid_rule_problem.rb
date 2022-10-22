@@ -18,8 +18,7 @@ module TwitterClient
   class InvalidRuleProblem < Problem
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
-      {
-      }
+      {}
     end
 
     # Returns all the JSON keys this model knows about, including the ones defined in its parent(s)
@@ -29,8 +28,7 @@ module TwitterClient
 
     # Attribute type mapping.
     def self.openapi_types
-      {
-      }
+      {}
     end
 
     # List of attributes with nullable: true

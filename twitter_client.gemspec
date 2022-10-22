@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Twitter API v2
 #
 # Twitter API v2 available endpoints
