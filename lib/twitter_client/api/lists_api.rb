@@ -57,43 +57,43 @@ module TwitterClient
         fail ArgumentError, "invalid value for 'id' when calling ListsApi.get_user_list_memberships, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling ListsApi.get_user_list_memberships, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 1
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 1
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling ListsApi.get_user_list_memberships, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length > 19
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length > 19
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling ListsApi.get_user_list_memberships, the character length must be smaller than or equal to 19.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling ListsApi.get_user_list_memberships, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "follower_count", "id", "member_count", "name", "owner_id", "private"]
-      if @api_client.config.client_side_validation && opts[:'list_fields'] && !opts[:'list_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:list_fields] && !opts[:list_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"list_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'list_fields'].nil? && opts[:'list_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:list_fields].nil? && opts[:list_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"list_fields"]" when calling ListsApi.get_user_list_memberships, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["owner_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling ListsApi.get_user_list_memberships, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling ListsApi.get_user_list_memberships, number of items must be greater than or equal to 1.'
       end
 
@@ -102,11 +102,11 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:'list_fields'], :csv) if !opts[:'list_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:list_fields], :csv) if !opts[:list_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -126,7 +126,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.get_user_list_memberships",
+        :operation => :'ListsApi.get_user_list_memberships',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -192,7 +192,7 @@ module TwitterClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'list_add_user_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:list_add_user_request])
 
       # return_type
       return_type = opts[:debug_return_type] || 'ListMutateResponse'
@@ -201,7 +201,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_add_member",
+        :operation => :'ListsApi.list_add_member',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -256,7 +256,7 @@ module TwitterClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'list_create_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:list_create_request])
 
       # return_type
       return_type = opts[:debug_return_type] || 'ListCreateResponse'
@@ -265,7 +265,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_id_create",
+        :operation => :'ListsApi.list_id_create',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -333,7 +333,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_id_delete",
+        :operation => :'ListsApi.list_id_delete',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -384,26 +384,26 @@ module TwitterClient
       end
 
       allowable_values = ["created_at", "description", "follower_count", "id", "member_count", "name", "owner_id", "private"]
-      if @api_client.config.client_side_validation && opts[:'list_fields'] && !opts[:'list_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:list_fields] && !opts[:list_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"list_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'list_fields'].nil? && opts[:'list_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:list_fields].nil? && opts[:list_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"list_fields"]" when calling ListsApi.list_id_get, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["owner_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling ListsApi.list_id_get, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling ListsApi.list_id_get, number of items must be greater than or equal to 1.'
       end
 
@@ -412,9 +412,9 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:'list_fields'], :csv) if !opts[:'list_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
+      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:list_fields], :csv) if !opts[:list_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -434,7 +434,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_id_get",
+        :operation => :'ListsApi.list_id_get',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -500,7 +500,7 @@ module TwitterClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'list_update_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:list_update_request])
 
       # return_type
       return_type = opts[:debug_return_type] || 'ListUpdateResponse'
@@ -509,7 +509,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_id_update",
+        :operation => :'ListsApi.list_id_update',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -588,7 +588,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_remove_member",
+        :operation => :'ListsApi.list_remove_member',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -649,7 +649,7 @@ module TwitterClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'list_followed_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:list_followed_request])
 
       # return_type
       return_type = opts[:debug_return_type] || 'ListFollowedResponse'
@@ -658,7 +658,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_user_follow",
+        :operation => :'ListsApi.list_user_follow',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -712,43 +712,43 @@ module TwitterClient
         fail ArgumentError, "invalid value for 'id' when calling ListsApi.list_user_owned_lists, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling ListsApi.list_user_owned_lists, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 1
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 1
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling ListsApi.list_user_owned_lists, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length > 19
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length > 19
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling ListsApi.list_user_owned_lists, the character length must be smaller than or equal to 19.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling ListsApi.list_user_owned_lists, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "follower_count", "id", "member_count", "name", "owner_id", "private"]
-      if @api_client.config.client_side_validation && opts[:'list_fields'] && !opts[:'list_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:list_fields] && !opts[:list_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"list_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'list_fields'].nil? && opts[:'list_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:list_fields].nil? && opts[:list_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"list_fields"]" when calling ListsApi.list_user_owned_lists, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["owner_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling ListsApi.list_user_owned_lists, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling ListsApi.list_user_owned_lists, number of items must be greater than or equal to 1.'
       end
 
@@ -757,11 +757,11 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:'list_fields'], :csv) if !opts[:'list_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:list_fields], :csv) if !opts[:list_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -781,7 +781,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_user_owned_lists",
+        :operation => :'ListsApi.list_user_owned_lists',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -855,7 +855,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_user_pin",
+        :operation => :'ListsApi.list_user_pin',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -901,26 +901,26 @@ module TwitterClient
         fail ArgumentError, "Missing the required parameter 'id' when calling ListsApi.list_user_pinned_lists"
       end
       allowable_values = ["created_at", "description", "follower_count", "id", "member_count", "name", "owner_id", "private"]
-      if @api_client.config.client_side_validation && opts[:'list_fields'] && !opts[:'list_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:list_fields] && !opts[:list_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"list_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'list_fields'].nil? && opts[:'list_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:list_fields].nil? && opts[:list_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"list_fields"]" when calling ListsApi.list_user_pinned_lists, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["owner_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling ListsApi.list_user_pinned_lists, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling ListsApi.list_user_pinned_lists, number of items must be greater than or equal to 1.'
       end
 
@@ -929,9 +929,9 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:'list_fields'], :csv) if !opts[:'list_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
+      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:list_fields], :csv) if !opts[:list_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -951,7 +951,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_user_pinned_lists",
+        :operation => :'ListsApi.list_user_pinned_lists',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1025,7 +1025,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_user_unfollow",
+        :operation => :'ListsApi.list_user_unfollow',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1099,7 +1099,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.list_user_unpin",
+        :operation => :'ListsApi.list_user_unpin',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1153,43 +1153,43 @@ module TwitterClient
         fail ArgumentError, "invalid value for 'id' when calling ListsApi.user_followed_lists, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling ListsApi.user_followed_lists, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 1
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 1
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling ListsApi.user_followed_lists, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length > 19
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length > 19
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling ListsApi.user_followed_lists, the character length must be smaller than or equal to 19.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling ListsApi.user_followed_lists, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "follower_count", "id", "member_count", "name", "owner_id", "private"]
-      if @api_client.config.client_side_validation && opts[:'list_fields'] && !opts[:'list_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:list_fields] && !opts[:list_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"list_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'list_fields'].nil? && opts[:'list_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:list_fields].nil? && opts[:list_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"list_fields"]" when calling ListsApi.user_followed_lists, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["owner_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling ListsApi.user_followed_lists, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling ListsApi.user_followed_lists, number of items must be greater than or equal to 1.'
       end
 
@@ -1198,11 +1198,11 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:'list_fields'], :csv) if !opts[:'list_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:'list.fields'] = @api_client.build_collection_param(opts[:list_fields], :csv) if !opts[:list_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -1222,7 +1222,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"ListsApi.user_followed_lists",
+        :operation => :'ListsApi.user_followed_lists',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,

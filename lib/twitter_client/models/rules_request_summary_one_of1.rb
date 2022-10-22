@@ -24,8 +24,8 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'deleted' => :'deleted',
-        :'not_deleted' => :'not_deleted'
+        :deleted => :deleted,
+        :not_deleted => :not_deleted
       }
     end
 
@@ -37,8 +37,8 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'deleted' => :'Integer',
-        :'not_deleted' => :'Integer'
+        :deleted => :Integer,
+        :not_deleted => :Integer
       }
     end
 
@@ -63,12 +63,12 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'deleted')
-        self.deleted = attributes[:'deleted']
+      if attributes.key?(:deleted)
+        self.deleted = attributes[:deleted]
       end
 
-      if attributes.key?(:'not_deleted')
-        self.not_deleted = attributes[:'not_deleted']
+      if attributes.key?(:not_deleted)
+        self.not_deleted = attributes[:not_deleted]
       end
     end
 

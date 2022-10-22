@@ -28,10 +28,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'data' => :'data',
-        :'errors' => :'errors',
-        :'includes' => :'includes',
-        :'matching_rules' => :'matching_rules'
+        :data => :data,
+        :errors => :errors,
+        :includes => :includes,
+        :matching_rules => :matching_rules
       }
     end
 
@@ -43,10 +43,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'data' => :'Tweet',
-        :'errors' => :'Array<Problem>',
-        :'includes' => :'Expansions',
-        :'matching_rules' => :'Array<FilteredStreamingTweetResponseMatchingRulesInner>'
+        :data => :Tweet,
+        :errors => :'Array<Problem>',
+        :includes => :Expansions,
+        :matching_rules => :'Array<FilteredStreamingTweetResponseMatchingRulesInner>'
       }
     end
 
@@ -71,22 +71,22 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'data')
-        self.data = attributes[:'data']
+      if attributes.key?(:data)
+        self.data = attributes[:data]
       end
 
-      if attributes.key?(:'errors')
-        if (value = attributes[:'errors']).is_a?(Array)
+      if attributes.key?(:errors)
+        if (value = attributes[:errors]).is_a?(Array)
           self.errors = value
         end
       end
 
-      if attributes.key?(:'includes')
-        self.includes = attributes[:'includes']
+      if attributes.key?(:includes)
+        self.includes = attributes[:includes]
       end
 
-      if attributes.key?(:'matching_rules')
-        if (value = attributes[:'matching_rules']).is_a?(Array)
+      if attributes.key?(:matching_rules)
+        if (value = attributes[:matching_rules]).is_a?(Array)
           self.matching_rules = value
         end
       end

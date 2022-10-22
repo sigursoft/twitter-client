@@ -28,11 +28,11 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'annotations' => :'annotations',
-        :'cashtags' => :'cashtags',
-        :'hashtags' => :'hashtags',
-        :'mentions' => :'mentions',
-        :'urls' => :'urls'
+        :annotations => :annotations,
+        :cashtags => :cashtags,
+        :hashtags => :hashtags,
+        :mentions => :mentions,
+        :urls => :urls
       }
     end
 
@@ -44,11 +44,11 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'annotations' => :'Array<FullTextEntitiesAnnotationsInner>',
-        :'cashtags' => :'Array<CashtagEntity>',
-        :'hashtags' => :'Array<HashtagEntity>',
-        :'mentions' => :'Array<MentionEntity>',
-        :'urls' => :'Array<UrlEntity>'
+        :annotations => :'Array<FullTextEntitiesAnnotationsInner>',
+        :cashtags => :'Array<CashtagEntity>',
+        :hashtags => :'Array<HashtagEntity>',
+        :mentions => :'Array<MentionEntity>',
+        :urls => :'Array<UrlEntity>'
       }
     end
 
@@ -73,32 +73,32 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'annotations')
-        if (value = attributes[:'annotations']).is_a?(Array)
+      if attributes.key?(:annotations)
+        if (value = attributes[:annotations]).is_a?(Array)
           self.annotations = value
         end
       end
 
-      if attributes.key?(:'cashtags')
-        if (value = attributes[:'cashtags']).is_a?(Array)
+      if attributes.key?(:cashtags)
+        if (value = attributes[:cashtags]).is_a?(Array)
           self.cashtags = value
         end
       end
 
-      if attributes.key?(:'hashtags')
-        if (value = attributes[:'hashtags']).is_a?(Array)
+      if attributes.key?(:hashtags)
+        if (value = attributes[:hashtags]).is_a?(Array)
           self.hashtags = value
         end
       end
 
-      if attributes.key?(:'mentions')
-        if (value = attributes[:'mentions']).is_a?(Array)
+      if attributes.key?(:mentions)
+        if (value = attributes[:mentions]).is_a?(Array)
           self.mentions = value
         end
       end
 
-      if attributes.key?(:'urls')
-        if (value = attributes[:'urls']).is_a?(Array)
+      if attributes.key?(:urls)
+        if (value = attributes[:urls]).is_a?(Array)
           self.urls = value
         end
       end

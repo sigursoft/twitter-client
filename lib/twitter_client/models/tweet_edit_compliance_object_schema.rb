@@ -28,10 +28,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'edit_tweet_ids' => :'edit_tweet_ids',
-        :'event_at' => :'event_at',
-        :'initial_tweet_id' => :'initial_tweet_id',
-        :'tweet' => :'tweet'
+        :edit_tweet_ids => :edit_tweet_ids,
+        :event_at => :event_at,
+        :initial_tweet_id => :initial_tweet_id,
+        :tweet => :tweet
       }
     end
 
@@ -43,10 +43,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'edit_tweet_ids' => :'Array<String>',
-        :'event_at' => :'Time',
-        :'initial_tweet_id' => :'String',
-        :'tweet' => :'TweetEditComplianceObjectSchemaTweet'
+        :edit_tweet_ids => :'Array<String>',
+        :event_at => :Time,
+        :initial_tweet_id => :String,
+        :tweet => :TweetEditComplianceObjectSchemaTweet
       }
     end
 
@@ -71,22 +71,22 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'edit_tweet_ids')
-        if (value = attributes[:'edit_tweet_ids']).is_a?(Array)
+      if attributes.key?(:edit_tweet_ids)
+        if (value = attributes[:edit_tweet_ids]).is_a?(Array)
           self.edit_tweet_ids = value
         end
       end
 
-      if attributes.key?(:'event_at')
-        self.event_at = attributes[:'event_at']
+      if attributes.key?(:event_at)
+        self.event_at = attributes[:event_at]
       end
 
-      if attributes.key?(:'initial_tweet_id')
-        self.initial_tweet_id = attributes[:'initial_tweet_id']
+      if attributes.key?(:initial_tweet_id)
+        self.initial_tweet_id = attributes[:initial_tweet_id]
       end
 
-      if attributes.key?(:'tweet')
-        self.tweet = attributes[:'tweet']
+      if attributes.key?(:tweet)
+        self.tweet = attributes[:tweet]
       end
     end
 

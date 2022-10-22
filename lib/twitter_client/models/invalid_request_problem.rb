@@ -21,7 +21,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'errors' => :'errors'
+        :errors => :errors
       }
     end
 
@@ -33,7 +33,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'errors' => :'Array<InvalidRequestProblemAllOfErrors>'
+        :errors => :'Array<InvalidRequestProblemAllOfErrors>'
       }
     end
 
@@ -46,8 +46,8 @@ module TwitterClient
     # List of class defined in allOf (OpenAPI v3)
     def self.openapi_all_of
       [
-      :'InvalidRequestProblemAllOf',
-      :'Problem'
+      :InvalidRequestProblemAllOf,
+      :Problem
       ]
     end
 
@@ -69,8 +69,8 @@ module TwitterClient
       # call parent's initialize
       super(attributes)
 
-      if attributes.key?(:'errors')
-        if (value = attributes[:'errors']).is_a?(Array)
+      if attributes.key?(:errors)
+        if (value = attributes[:errors]).is_a?(Array)
           self.errors = value
         end
       end

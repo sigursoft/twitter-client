@@ -22,8 +22,8 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'alt_text' => :'alt_text',
-        :'url' => :'url'
+        :alt_text => :alt_text,
+        :url => :url
       }
     end
 
@@ -35,8 +35,8 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'alt_text' => :'String',
-        :'url' => :'String'
+        :alt_text => :String,
+        :url => :String
       }
     end
 
@@ -49,8 +49,8 @@ module TwitterClient
     # List of class defined in allOf (OpenAPI v3)
     def self.openapi_all_of
       [
-      :'Media',
-      :'PhotoAllOf'
+      :Media,
+      :PhotoAllOf
       ]
     end
 
@@ -72,12 +72,12 @@ module TwitterClient
       # call parent's initialize
       super(attributes)
 
-      if attributes.key?(:'alt_text')
-        self.alt_text = attributes[:'alt_text']
+      if attributes.key?(:alt_text)
+        self.alt_text = attributes[:alt_text]
       end
 
-      if attributes.key?(:'url')
-        self.url = attributes[:'url']
+      if attributes.key?(:url)
+        self.url = attributes[:url]
       end
     end
 

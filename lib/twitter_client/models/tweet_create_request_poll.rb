@@ -49,9 +49,9 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'duration_minutes' => :'duration_minutes',
-        :'options' => :'options',
-        :'reply_settings' => :'reply_settings'
+        :duration_minutes => :duration_minutes,
+        :options => :options,
+        :reply_settings => :reply_settings
       }
     end
 
@@ -63,9 +63,9 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'duration_minutes' => :'Integer',
-        :'options' => :'Array<String>',
-        :'reply_settings' => :'String'
+        :duration_minutes => :Integer,
+        :options => :'Array<String>',
+        :reply_settings => :String
       }
     end
 
@@ -90,18 +90,18 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'duration_minutes')
-        self.duration_minutes = attributes[:'duration_minutes']
+      if attributes.key?(:duration_minutes)
+        self.duration_minutes = attributes[:duration_minutes]
       end
 
-      if attributes.key?(:'options')
-        if (value = attributes[:'options']).is_a?(Array)
+      if attributes.key?(:options)
+        if (value = attributes[:options]).is_a?(Array)
           self.options = value
         end
       end
 
-      if attributes.key?(:'reply_settings')
-        self.reply_settings = attributes[:'reply_settings']
+      if attributes.key?(:reply_settings)
+        self.reply_settings = attributes[:reply_settings]
       end
     end
 

@@ -43,7 +43,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'disconnect_type' => :'disconnect_type'
+        :disconnect_type => :disconnect_type
       }
     end
 
@@ -55,7 +55,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'disconnect_type' => :'String'
+        :disconnect_type => :String
       }
     end
 
@@ -68,8 +68,8 @@ module TwitterClient
     # List of class defined in allOf (OpenAPI v3)
     def self.openapi_all_of
       [
-      :'OperationalDisconnectProblemAllOf',
-      :'Problem'
+      :OperationalDisconnectProblemAllOf,
+      :Problem
       ]
     end
 
@@ -91,8 +91,8 @@ module TwitterClient
       # call parent's initialize
       super(attributes)
 
-      if attributes.key?(:'disconnect_type')
-        self.disconnect_type = attributes[:'disconnect_type']
+      if attributes.key?(:disconnect_type)
+        self.disconnect_type = attributes[:disconnect_type]
       end
     end
 

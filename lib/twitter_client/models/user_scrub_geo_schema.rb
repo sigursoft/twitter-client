@@ -20,7 +20,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'scrub_geo' => :'scrub_geo'
+        :scrub_geo => :scrub_geo
       }
     end
 
@@ -32,7 +32,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'scrub_geo' => :'UserScrubGeoObjectSchema'
+        :scrub_geo => :UserScrubGeoObjectSchema
       }
     end
 
@@ -57,8 +57,8 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'scrub_geo')
-        self.scrub_geo = attributes[:'scrub_geo']
+      if attributes.key?(:scrub_geo)
+        self.scrub_geo = attributes[:scrub_geo]
       end
     end
 

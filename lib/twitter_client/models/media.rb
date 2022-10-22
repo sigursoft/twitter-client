@@ -29,10 +29,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'height' => :'height',
-        :'media_key' => :'media_key',
-        :'type' => :'type',
-        :'width' => :'width'
+        :height => :height,
+        :media_key => :media_key,
+        :type => :type,
+        :width => :width
       }
     end
 
@@ -44,10 +44,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'height' => :'Integer',
-        :'media_key' => :'String',
-        :'type' => :'String',
-        :'width' => :'Integer'
+        :height => :Integer,
+        :media_key => :String,
+        :type => :String,
+        :width => :Integer
       }
     end
 
@@ -59,7 +59,7 @@ module TwitterClient
 
     # discriminator's property name in OpenAPI v3
     def self.openapi_discriminator_name
-      :'type'
+      :type
     end
 
     # Initializes the object
@@ -77,20 +77,20 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'height')
-        self.height = attributes[:'height']
+      if attributes.key?(:height)
+        self.height = attributes[:height]
       end
 
-      if attributes.key?(:'media_key')
-        self.media_key = attributes[:'media_key']
+      if attributes.key?(:media_key)
+        self.media_key = attributes[:media_key]
       end
 
-      if attributes.key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.key?(:type)
+        self.type = attributes[:type]
       end
 
-      if attributes.key?(:'width')
-        self.width = attributes[:'width']
+      if attributes.key?(:width)
+        self.width = attributes[:width]
       end
     end
 

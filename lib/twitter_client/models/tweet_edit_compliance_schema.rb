@@ -20,7 +20,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'tweet_edit' => :'tweet_edit'
+        :tweet_edit => :tweet_edit
       }
     end
 
@@ -32,7 +32,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'tweet_edit' => :'TweetEditComplianceObjectSchema'
+        :tweet_edit => :TweetEditComplianceObjectSchema
       }
     end
 
@@ -57,8 +57,8 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'tweet_edit')
-        self.tweet_edit = attributes[:'tweet_edit']
+      if attributes.key?(:tweet_edit)
+        self.tweet_edit = attributes[:tweet_edit]
       end
     end
 

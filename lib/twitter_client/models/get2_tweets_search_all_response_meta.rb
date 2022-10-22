@@ -30,10 +30,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'newest_id' => :'newest_id',
-        :'next_token' => :'next_token',
-        :'oldest_id' => :'oldest_id',
-        :'result_count' => :'result_count'
+        :newest_id => :newest_id,
+        :next_token => :next_token,
+        :oldest_id => :oldest_id,
+        :result_count => :result_count
       }
     end
 
@@ -45,10 +45,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'newest_id' => :'String',
-        :'next_token' => :'String',
-        :'oldest_id' => :'String',
-        :'result_count' => :'Integer'
+        :newest_id => :String,
+        :next_token => :String,
+        :oldest_id => :String,
+        :result_count => :Integer
       }
     end
 
@@ -73,20 +73,20 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'newest_id')
-        self.newest_id = attributes[:'newest_id']
+      if attributes.key?(:newest_id)
+        self.newest_id = attributes[:newest_id]
       end
 
-      if attributes.key?(:'next_token')
-        self.next_token = attributes[:'next_token']
+      if attributes.key?(:next_token)
+        self.next_token = attributes[:next_token]
       end
 
-      if attributes.key?(:'oldest_id')
-        self.oldest_id = attributes[:'oldest_id']
+      if attributes.key?(:oldest_id)
+        self.oldest_id = attributes[:oldest_id]
       end
 
-      if attributes.key?(:'result_count')
-        self.result_count = attributes[:'result_count']
+      if attributes.key?(:result_count)
+        self.result_count = attributes[:result_count]
       end
     end
 

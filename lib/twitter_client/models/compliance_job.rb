@@ -43,15 +43,15 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'created_at' => :'created_at',
-        :'download_expires_at' => :'download_expires_at',
-        :'download_url' => :'download_url',
-        :'id' => :'id',
-        :'name' => :'name',
-        :'status' => :'status',
-        :'type' => :'type',
-        :'upload_expires_at' => :'upload_expires_at',
-        :'upload_url' => :'upload_url'
+        :created_at => :created_at,
+        :download_expires_at => :download_expires_at,
+        :download_url => :download_url,
+        :id => :id,
+        :name => :name,
+        :status => :status,
+        :type => :type,
+        :upload_expires_at => :upload_expires_at,
+        :upload_url => :upload_url
       }
     end
 
@@ -63,15 +63,15 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'created_at' => :'Time',
-        :'download_expires_at' => :'Time',
-        :'download_url' => :'String',
-        :'id' => :'String',
-        :'name' => :'String',
-        :'status' => :'ComplianceJobStatus',
-        :'type' => :'ComplianceJobType',
-        :'upload_expires_at' => :'Time',
-        :'upload_url' => :'String'
+        :created_at => :Time,
+        :download_expires_at => :Time,
+        :download_url => :String,
+        :id => :String,
+        :name => :String,
+        :status => :ComplianceJobStatus,
+        :type => :ComplianceJobType,
+        :upload_expires_at => :Time,
+        :upload_url => :String
       }
     end
 
@@ -96,40 +96,40 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'created_at')
-        self.created_at = attributes[:'created_at']
+      if attributes.key?(:created_at)
+        self.created_at = attributes[:created_at]
       end
 
-      if attributes.key?(:'download_expires_at')
-        self.download_expires_at = attributes[:'download_expires_at']
+      if attributes.key?(:download_expires_at)
+        self.download_expires_at = attributes[:download_expires_at]
       end
 
-      if attributes.key?(:'download_url')
-        self.download_url = attributes[:'download_url']
+      if attributes.key?(:download_url)
+        self.download_url = attributes[:download_url]
       end
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:id)
+        self.id = attributes[:id]
       end
 
-      if attributes.key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.key?(:name)
+        self.name = attributes[:name]
       end
 
-      if attributes.key?(:'status')
-        self.status = attributes[:'status']
+      if attributes.key?(:status)
+        self.status = attributes[:status]
       end
 
-      if attributes.key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.key?(:type)
+        self.type = attributes[:type]
       end
 
-      if attributes.key?(:'upload_expires_at')
-        self.upload_expires_at = attributes[:'upload_expires_at']
+      if attributes.key?(:upload_expires_at)
+        self.upload_expires_at = attributes[:upload_expires_at]
       end
 
-      if attributes.key?(:'upload_url')
-        self.upload_url = attributes[:'upload_url']
+      if attributes.key?(:upload_url)
+        self.upload_url = attributes[:upload_url]
       end
     end
 

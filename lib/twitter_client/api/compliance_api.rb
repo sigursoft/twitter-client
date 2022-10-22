@@ -71,7 +71,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"ComplianceApi.create_batch_compliance_job",
+        :operation => :'ComplianceApi.create_batch_compliance_job',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -118,10 +118,10 @@ module TwitterClient
       end
 
       allowable_values = ["created_at", "download_expires_at", "download_url", "id", "name", "resumable", "status", "type", "upload_expires_at", "upload_url"]
-      if @api_client.config.client_side_validation && opts[:'compliance_job_fields'] && !opts[:'compliance_job_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:compliance_job_fields] && !opts[:compliance_job_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"compliance_job_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'compliance_job_fields'].nil? && opts[:'compliance_job_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:compliance_job_fields].nil? && opts[:compliance_job_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"compliance_job_fields"]" when calling ComplianceApi.get_batch_compliance_job, number of items must be greater than or equal to 1.'
       end
 
@@ -130,7 +130,7 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'compliance_job.fields'] = @api_client.build_collection_param(opts[:'compliance_job_fields'], :csv) if !opts[:'compliance_job_fields'].nil?
+      query_params[:'compliance_job.fields'] = @api_client.build_collection_param(opts[:compliance_job_fields], :csv) if !opts[:compliance_job_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -150,7 +150,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"ComplianceApi.get_batch_compliance_job",
+        :operation => :'ComplianceApi.get_batch_compliance_job',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -203,11 +203,11 @@ module TwitterClient
         fail ArgumentError, 'invalid value for "partition" when calling ComplianceApi.get_tweets_compliance_stream, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] > 5
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] > 5
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling ComplianceApi.get_tweets_compliance_stream, must be smaller than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] < 0
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] < 0
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling ComplianceApi.get_tweets_compliance_stream, must be greater than or equal to 0.'
       end
 
@@ -216,10 +216,10 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'partition'] = partition
-      query_params[:'backfill_minutes'] = opts[:'backfill_minutes'] if !opts[:'backfill_minutes'].nil?
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
+      query_params[:partition] = partition
+      query_params[:backfill_minutes] = opts[:backfill_minutes] if !opts[:backfill_minutes].nil?
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -239,7 +239,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"ComplianceApi.get_tweets_compliance_stream",
+        :operation => :'ComplianceApi.get_tweets_compliance_stream',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -278,11 +278,11 @@ module TwitterClient
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ComplianceApi.get_tweets_label_stream ...'
       end
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] > 5
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] > 5
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling ComplianceApi.get_tweets_label_stream, must be smaller than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] < 0
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] < 0
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling ComplianceApi.get_tweets_label_stream, must be greater than or equal to 0.'
       end
 
@@ -291,9 +291,9 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'backfill_minutes'] = opts[:'backfill_minutes'] if !opts[:'backfill_minutes'].nil?
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
+      query_params[:backfill_minutes] = opts[:backfill_minutes] if !opts[:backfill_minutes].nil?
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -313,7 +313,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"ComplianceApi.get_tweets_label_stream",
+        :operation => :'ComplianceApi.get_tweets_label_stream',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -366,11 +366,11 @@ module TwitterClient
         fail ArgumentError, 'invalid value for "partition" when calling ComplianceApi.get_users_compliance_stream, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] > 5
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] > 5
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling ComplianceApi.get_users_compliance_stream, must be smaller than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] < 0
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] < 0
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling ComplianceApi.get_users_compliance_stream, must be greater than or equal to 0.'
       end
 
@@ -379,10 +379,10 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'partition'] = partition
-      query_params[:'backfill_minutes'] = opts[:'backfill_minutes'] if !opts[:'backfill_minutes'].nil?
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
+      query_params[:partition] = partition
+      query_params[:backfill_minutes] = opts[:backfill_minutes] if !opts[:backfill_minutes].nil?
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -402,7 +402,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"ComplianceApi.get_users_compliance_stream",
+        :operation => :'ComplianceApi.get_users_compliance_stream',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -451,14 +451,14 @@ module TwitterClient
         fail ArgumentError, "invalid value for \"type\", must be one of #{allowable_values}"
       end
       allowable_values = ["created", "in_progress", "failed", "complete"]
-      if @api_client.config.client_side_validation && opts[:'status'] && !allowable_values.include?(opts[:'status'])
+      if @api_client.config.client_side_validation && opts[:status] && !allowable_values.include?(opts[:status])
         fail ArgumentError, "invalid value for \"status\", must be one of #{allowable_values}"
       end
       allowable_values = ["created_at", "download_expires_at", "download_url", "id", "name", "resumable", "status", "type", "upload_expires_at", "upload_url"]
-      if @api_client.config.client_side_validation && opts[:'compliance_job_fields'] && !opts[:'compliance_job_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:compliance_job_fields] && !opts[:compliance_job_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"compliance_job_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'compliance_job_fields'].nil? && opts[:'compliance_job_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:compliance_job_fields].nil? && opts[:compliance_job_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"compliance_job_fields"]" when calling ComplianceApi.list_batch_compliance_jobs, number of items must be greater than or equal to 1.'
       end
 
@@ -467,9 +467,9 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'type'] = type
-      query_params[:'status'] = opts[:'status'] if !opts[:'status'].nil?
-      query_params[:'compliance_job.fields'] = @api_client.build_collection_param(opts[:'compliance_job_fields'], :csv) if !opts[:'compliance_job_fields'].nil?
+      query_params[:type] = type
+      query_params[:status] = opts[:status] if !opts[:status].nil?
+      query_params[:'compliance_job.fields'] = @api_client.build_collection_param(opts[:compliance_job_fields], :csv) if !opts[:compliance_job_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -489,7 +489,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"ComplianceApi.list_batch_compliance_jobs",
+        :operation => :'ComplianceApi.list_batch_compliance_jobs',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,

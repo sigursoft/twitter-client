@@ -20,7 +20,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'bookmarked' => :'bookmarked'
+        :bookmarked => :bookmarked
       }
     end
 
@@ -32,7 +32,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'bookmarked' => :'Boolean'
+        :bookmarked => :Boolean
       }
     end
 
@@ -57,8 +57,8 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'bookmarked')
-        self.bookmarked = attributes[:'bookmarked']
+      if attributes.key?(:bookmarked)
+        self.bookmarked = attributes[:bookmarked]
       end
     end
 

@@ -31,10 +31,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'created' => :'created',
-        :'invalid' => :'invalid',
-        :'not_created' => :'not_created',
-        :'valid' => :'valid'
+        :created => :created,
+        :invalid => :invalid,
+        :not_created => :not_created,
+        :valid => :valid
       }
     end
 
@@ -46,10 +46,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'created' => :'Integer',
-        :'invalid' => :'Integer',
-        :'not_created' => :'Integer',
-        :'valid' => :'Integer'
+        :created => :Integer,
+        :invalid => :Integer,
+        :not_created => :Integer,
+        :valid => :Integer
       }
     end
 
@@ -74,20 +74,20 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'created')
-        self.created = attributes[:'created']
+      if attributes.key?(:created)
+        self.created = attributes[:created]
       end
 
-      if attributes.key?(:'invalid')
-        self.invalid = attributes[:'invalid']
+      if attributes.key?(:invalid)
+        self.invalid = attributes[:invalid]
       end
 
-      if attributes.key?(:'not_created')
-        self.not_created = attributes[:'not_created']
+      if attributes.key?(:not_created)
+        self.not_created = attributes[:not_created]
       end
 
-      if attributes.key?(:'valid')
-        self.valid = attributes[:'valid']
+      if attributes.key?(:valid)
+        self.valid = attributes[:valid]
       end
     end
 

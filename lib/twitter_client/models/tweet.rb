@@ -73,28 +73,28 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'attachments' => :'attachments',
-        :'author_id' => :'author_id',
-        :'context_annotations' => :'context_annotations',
-        :'conversation_id' => :'conversation_id',
-        :'created_at' => :'created_at',
-        :'edit_controls' => :'edit_controls',
-        :'edit_history_tweet_ids' => :'edit_history_tweet_ids',
-        :'entities' => :'entities',
-        :'geo' => :'geo',
-        :'id' => :'id',
-        :'in_reply_to_user_id' => :'in_reply_to_user_id',
-        :'lang' => :'lang',
-        :'non_public_metrics' => :'non_public_metrics',
-        :'organic_metrics' => :'organic_metrics',
-        :'possibly_sensitive' => :'possibly_sensitive',
-        :'promoted_metrics' => :'promoted_metrics',
-        :'public_metrics' => :'public_metrics',
-        :'referenced_tweets' => :'referenced_tweets',
-        :'reply_settings' => :'reply_settings',
-        :'source' => :'source',
-        :'text' => :'text',
-        :'withheld' => :'withheld'
+        :attachments => :attachments,
+        :author_id => :author_id,
+        :context_annotations => :context_annotations,
+        :conversation_id => :conversation_id,
+        :created_at => :created_at,
+        :edit_controls => :edit_controls,
+        :edit_history_tweet_ids => :edit_history_tweet_ids,
+        :entities => :entities,
+        :geo => :geo,
+        :id => :id,
+        :in_reply_to_user_id => :in_reply_to_user_id,
+        :lang => :lang,
+        :non_public_metrics => :non_public_metrics,
+        :organic_metrics => :organic_metrics,
+        :possibly_sensitive => :possibly_sensitive,
+        :promoted_metrics => :promoted_metrics,
+        :public_metrics => :public_metrics,
+        :referenced_tweets => :referenced_tweets,
+        :reply_settings => :reply_settings,
+        :source => :source,
+        :text => :text,
+        :withheld => :withheld
       }
     end
 
@@ -106,28 +106,28 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'attachments' => :'TweetAttachments',
-        :'author_id' => :'String',
-        :'context_annotations' => :'Array<ContextAnnotation>',
-        :'conversation_id' => :'String',
-        :'created_at' => :'Time',
-        :'edit_controls' => :'TweetEditControls',
-        :'edit_history_tweet_ids' => :'Array<String>',
-        :'entities' => :'FullTextEntities',
-        :'geo' => :'TweetGeo',
-        :'id' => :'String',
-        :'in_reply_to_user_id' => :'String',
-        :'lang' => :'String',
-        :'non_public_metrics' => :'TweetNonPublicMetrics',
-        :'organic_metrics' => :'TweetOrganicMetrics',
-        :'possibly_sensitive' => :'Boolean',
-        :'promoted_metrics' => :'TweetPromotedMetrics',
-        :'public_metrics' => :'TweetPublicMetrics',
-        :'referenced_tweets' => :'Array<TweetReferencedTweetsInner>',
-        :'reply_settings' => :'ReplySettings',
-        :'source' => :'String',
-        :'text' => :'String',
-        :'withheld' => :'TweetWithheld'
+        :attachments => :TweetAttachments,
+        :author_id => :String,
+        :context_annotations => :'Array<ContextAnnotation>',
+        :conversation_id => :String,
+        :created_at => :Time,
+        :edit_controls => :TweetEditControls,
+        :edit_history_tweet_ids => :'Array<String>',
+        :entities => :FullTextEntities,
+        :geo => :TweetGeo,
+        :id => :String,
+        :in_reply_to_user_id => :String,
+        :lang => :String,
+        :non_public_metrics => :TweetNonPublicMetrics,
+        :organic_metrics => :TweetOrganicMetrics,
+        :possibly_sensitive => :Boolean,
+        :promoted_metrics => :TweetPromotedMetrics,
+        :public_metrics => :TweetPublicMetrics,
+        :referenced_tweets => :'Array<TweetReferencedTweetsInner>',
+        :reply_settings => :ReplySettings,
+        :source => :String,
+        :text => :String,
+        :withheld => :TweetWithheld
       }
     end
 
@@ -152,98 +152,98 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'attachments')
-        self.attachments = attributes[:'attachments']
+      if attributes.key?(:attachments)
+        self.attachments = attributes[:attachments]
       end
 
-      if attributes.key?(:'author_id')
-        self.author_id = attributes[:'author_id']
+      if attributes.key?(:author_id)
+        self.author_id = attributes[:author_id]
       end
 
-      if attributes.key?(:'context_annotations')
-        if (value = attributes[:'context_annotations']).is_a?(Array)
+      if attributes.key?(:context_annotations)
+        if (value = attributes[:context_annotations]).is_a?(Array)
           self.context_annotations = value
         end
       end
 
-      if attributes.key?(:'conversation_id')
-        self.conversation_id = attributes[:'conversation_id']
+      if attributes.key?(:conversation_id)
+        self.conversation_id = attributes[:conversation_id]
       end
 
-      if attributes.key?(:'created_at')
-        self.created_at = attributes[:'created_at']
+      if attributes.key?(:created_at)
+        self.created_at = attributes[:created_at]
       end
 
-      if attributes.key?(:'edit_controls')
-        self.edit_controls = attributes[:'edit_controls']
+      if attributes.key?(:edit_controls)
+        self.edit_controls = attributes[:edit_controls]
       end
 
-      if attributes.key?(:'edit_history_tweet_ids')
-        if (value = attributes[:'edit_history_tweet_ids']).is_a?(Array)
+      if attributes.key?(:edit_history_tweet_ids)
+        if (value = attributes[:edit_history_tweet_ids]).is_a?(Array)
           self.edit_history_tweet_ids = value
         end
       end
 
-      if attributes.key?(:'entities')
-        self.entities = attributes[:'entities']
+      if attributes.key?(:entities)
+        self.entities = attributes[:entities]
       end
 
-      if attributes.key?(:'geo')
-        self.geo = attributes[:'geo']
+      if attributes.key?(:geo)
+        self.geo = attributes[:geo]
       end
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:id)
+        self.id = attributes[:id]
       end
 
-      if attributes.key?(:'in_reply_to_user_id')
-        self.in_reply_to_user_id = attributes[:'in_reply_to_user_id']
+      if attributes.key?(:in_reply_to_user_id)
+        self.in_reply_to_user_id = attributes[:in_reply_to_user_id]
       end
 
-      if attributes.key?(:'lang')
-        self.lang = attributes[:'lang']
+      if attributes.key?(:lang)
+        self.lang = attributes[:lang]
       end
 
-      if attributes.key?(:'non_public_metrics')
-        self.non_public_metrics = attributes[:'non_public_metrics']
+      if attributes.key?(:non_public_metrics)
+        self.non_public_metrics = attributes[:non_public_metrics]
       end
 
-      if attributes.key?(:'organic_metrics')
-        self.organic_metrics = attributes[:'organic_metrics']
+      if attributes.key?(:organic_metrics)
+        self.organic_metrics = attributes[:organic_metrics]
       end
 
-      if attributes.key?(:'possibly_sensitive')
-        self.possibly_sensitive = attributes[:'possibly_sensitive']
+      if attributes.key?(:possibly_sensitive)
+        self.possibly_sensitive = attributes[:possibly_sensitive]
       end
 
-      if attributes.key?(:'promoted_metrics')
-        self.promoted_metrics = attributes[:'promoted_metrics']
+      if attributes.key?(:promoted_metrics)
+        self.promoted_metrics = attributes[:promoted_metrics]
       end
 
-      if attributes.key?(:'public_metrics')
-        self.public_metrics = attributes[:'public_metrics']
+      if attributes.key?(:public_metrics)
+        self.public_metrics = attributes[:public_metrics]
       end
 
-      if attributes.key?(:'referenced_tweets')
-        if (value = attributes[:'referenced_tweets']).is_a?(Array)
+      if attributes.key?(:referenced_tweets)
+        if (value = attributes[:referenced_tweets]).is_a?(Array)
           self.referenced_tweets = value
         end
       end
 
-      if attributes.key?(:'reply_settings')
-        self.reply_settings = attributes[:'reply_settings']
+      if attributes.key?(:reply_settings)
+        self.reply_settings = attributes[:reply_settings]
       end
 
-      if attributes.key?(:'source')
-        self.source = attributes[:'source']
+      if attributes.key?(:source)
+        self.source = attributes[:source]
       end
 
-      if attributes.key?(:'text')
-        self.text = attributes[:'text']
+      if attributes.key?(:text)
+        self.text = attributes[:text]
       end
 
-      if attributes.key?(:'withheld')
-        self.withheld = attributes[:'withheld']
+      if attributes.key?(:withheld)
+        self.withheld = attributes[:withheld]
       end
     end
 

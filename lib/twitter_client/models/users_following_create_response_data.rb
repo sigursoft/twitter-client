@@ -22,8 +22,8 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'following' => :'following',
-        :'pending_follow' => :'pending_follow'
+        :following => :following,
+        :pending_follow => :pending_follow
       }
     end
 
@@ -35,8 +35,8 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'following' => :'Boolean',
-        :'pending_follow' => :'Boolean'
+        :following => :Boolean,
+        :pending_follow => :Boolean
       }
     end
 
@@ -61,12 +61,12 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'following')
-        self.following = attributes[:'following']
+      if attributes.key?(:following)
+        self.following = attributes[:following]
       end
 
-      if attributes.key?(:'pending_follow')
-        self.pending_follow = attributes[:'pending_follow']
+      if attributes.key?(:pending_follow)
+        self.pending_follow = attributes[:pending_follow]
       end
     end
 

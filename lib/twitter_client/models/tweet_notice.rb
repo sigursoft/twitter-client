@@ -38,13 +38,13 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'application' => :'application',
-        :'details' => :'details',
-        :'event_at' => :'event_at',
-        :'event_type' => :'event_type',
-        :'extended_details_url' => :'extended_details_url',
-        :'label_title' => :'label_title',
-        :'tweet' => :'tweet'
+        :application => :application,
+        :details => :details,
+        :event_at => :event_at,
+        :event_type => :event_type,
+        :extended_details_url => :extended_details_url,
+        :label_title => :label_title,
+        :tweet => :tweet
       }
     end
 
@@ -56,13 +56,13 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'application' => :'String',
-        :'details' => :'String',
-        :'event_at' => :'Time',
-        :'event_type' => :'String',
-        :'extended_details_url' => :'String',
-        :'label_title' => :'String',
-        :'tweet' => :'TweetComplianceSchemaTweet'
+        :application => :String,
+        :details => :String,
+        :event_at => :Time,
+        :event_type => :String,
+        :extended_details_url => :String,
+        :label_title => :String,
+        :tweet => :TweetComplianceSchemaTweet
       }
     end
 
@@ -87,32 +87,32 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'application')
-        self.application = attributes[:'application']
+      if attributes.key?(:application)
+        self.application = attributes[:application]
       end
 
-      if attributes.key?(:'details')
-        self.details = attributes[:'details']
+      if attributes.key?(:details)
+        self.details = attributes[:details]
       end
 
-      if attributes.key?(:'event_at')
-        self.event_at = attributes[:'event_at']
+      if attributes.key?(:event_at)
+        self.event_at = attributes[:event_at]
       end
 
-      if attributes.key?(:'event_type')
-        self.event_type = attributes[:'event_type']
+      if attributes.key?(:event_type)
+        self.event_type = attributes[:event_type]
       end
 
-      if attributes.key?(:'extended_details_url')
-        self.extended_details_url = attributes[:'extended_details_url']
+      if attributes.key?(:extended_details_url)
+        self.extended_details_url = attributes[:extended_details_url]
       end
 
-      if attributes.key?(:'label_title')
-        self.label_title = attributes[:'label_title']
+      if attributes.key?(:label_title)
+        self.label_title = attributes[:label_title]
       end
 
-      if attributes.key?(:'tweet')
-        self.tweet = attributes[:'tweet']
+      if attributes.key?(:tweet)
+        self.tweet = attributes[:tweet]
       end
     end
 

@@ -58,20 +58,20 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'created_at' => :'created_at',
-        :'description' => :'description',
-        :'entities' => :'entities',
-        :'id' => :'id',
-        :'location' => :'location',
-        :'name' => :'name',
-        :'pinned_tweet_id' => :'pinned_tweet_id',
-        :'profile_image_url' => :'profile_image_url',
-        :'protected' => :'protected',
-        :'public_metrics' => :'public_metrics',
-        :'url' => :'url',
-        :'username' => :'username',
-        :'verified' => :'verified',
-        :'withheld' => :'withheld'
+        :created_at => :created_at,
+        :description => :description,
+        :entities => :entities,
+        :id => :id,
+        :location => :location,
+        :name => :name,
+        :pinned_tweet_id => :pinned_tweet_id,
+        :profile_image_url => :profile_image_url,
+        :protected => :protected,
+        :public_metrics => :public_metrics,
+        :url => :url,
+        :username => :username,
+        :verified => :verified,
+        :withheld => :withheld
       }
     end
 
@@ -83,20 +83,20 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'created_at' => :'Time',
-        :'description' => :'String',
-        :'entities' => :'UserEntities',
-        :'id' => :'String',
-        :'location' => :'String',
-        :'name' => :'String',
-        :'pinned_tweet_id' => :'String',
-        :'profile_image_url' => :'String',
-        :'protected' => :'Boolean',
-        :'public_metrics' => :'UserPublicMetrics',
-        :'url' => :'String',
-        :'username' => :'String',
-        :'verified' => :'Boolean',
-        :'withheld' => :'UserWithheld'
+        :created_at => :Time,
+        :description => :String,
+        :entities => :UserEntities,
+        :id => :String,
+        :location => :String,
+        :name => :String,
+        :pinned_tweet_id => :String,
+        :profile_image_url => :String,
+        :protected => :Boolean,
+        :public_metrics => :UserPublicMetrics,
+        :url => :String,
+        :username => :String,
+        :verified => :Boolean,
+        :withheld => :UserWithheld
       }
     end
 
@@ -121,60 +121,60 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'created_at')
-        self.created_at = attributes[:'created_at']
+      if attributes.key?(:created_at)
+        self.created_at = attributes[:created_at]
       end
 
-      if attributes.key?(:'description')
-        self.description = attributes[:'description']
+      if attributes.key?(:description)
+        self.description = attributes[:description]
       end
 
-      if attributes.key?(:'entities')
-        self.entities = attributes[:'entities']
+      if attributes.key?(:entities)
+        self.entities = attributes[:entities]
       end
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:id)
+        self.id = attributes[:id]
       end
 
-      if attributes.key?(:'location')
-        self.location = attributes[:'location']
+      if attributes.key?(:location)
+        self.location = attributes[:location]
       end
 
-      if attributes.key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.key?(:name)
+        self.name = attributes[:name]
       end
 
-      if attributes.key?(:'pinned_tweet_id')
-        self.pinned_tweet_id = attributes[:'pinned_tweet_id']
+      if attributes.key?(:pinned_tweet_id)
+        self.pinned_tweet_id = attributes[:pinned_tweet_id]
       end
 
-      if attributes.key?(:'profile_image_url')
-        self.profile_image_url = attributes[:'profile_image_url']
+      if attributes.key?(:profile_image_url)
+        self.profile_image_url = attributes[:profile_image_url]
       end
 
-      if attributes.key?(:'protected')
-        self.protected = attributes[:'protected']
+      if attributes.key?(:protected)
+        self.protected = attributes[:protected]
       end
 
-      if attributes.key?(:'public_metrics')
-        self.public_metrics = attributes[:'public_metrics']
+      if attributes.key?(:public_metrics)
+        self.public_metrics = attributes[:public_metrics]
       end
 
-      if attributes.key?(:'url')
-        self.url = attributes[:'url']
+      if attributes.key?(:url)
+        self.url = attributes[:url]
       end
 
-      if attributes.key?(:'username')
-        self.username = attributes[:'username']
+      if attributes.key?(:username)
+        self.username = attributes[:username]
       end
 
-      if attributes.key?(:'verified')
-        self.verified = attributes[:'verified']
+      if attributes.key?(:verified)
+        self.verified = attributes[:verified]
       end
 
-      if attributes.key?(:'withheld')
-        self.withheld = attributes[:'withheld']
+      if attributes.key?(:withheld)
+        self.withheld = attributes[:withheld]
       end
     end
 

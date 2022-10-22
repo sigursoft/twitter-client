@@ -39,14 +39,14 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'contained_within' => :'contained_within',
-        :'country' => :'country',
-        :'country_code' => :'country_code',
-        :'full_name' => :'full_name',
-        :'geo' => :'geo',
-        :'id' => :'id',
-        :'name' => :'name',
-        :'place_type' => :'place_type'
+        :contained_within => :contained_within,
+        :country => :country,
+        :country_code => :country_code,
+        :full_name => :full_name,
+        :geo => :geo,
+        :id => :id,
+        :name => :name,
+        :place_type => :place_type
       }
     end
 
@@ -58,14 +58,14 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'contained_within' => :'Array<String>',
-        :'country' => :'String',
-        :'country_code' => :'String',
-        :'full_name' => :'String',
-        :'geo' => :'Geo',
-        :'id' => :'String',
-        :'name' => :'String',
-        :'place_type' => :'PlaceType'
+        :contained_within => :'Array<String>',
+        :country => :String,
+        :country_code => :String,
+        :full_name => :String,
+        :geo => :Geo,
+        :id => :String,
+        :name => :String,
+        :place_type => :PlaceType
       }
     end
 
@@ -90,38 +90,38 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'contained_within')
-        if (value = attributes[:'contained_within']).is_a?(Array)
+      if attributes.key?(:contained_within)
+        if (value = attributes[:contained_within]).is_a?(Array)
           self.contained_within = value
         end
       end
 
-      if attributes.key?(:'country')
-        self.country = attributes[:'country']
+      if attributes.key?(:country)
+        self.country = attributes[:country]
       end
 
-      if attributes.key?(:'country_code')
-        self.country_code = attributes[:'country_code']
+      if attributes.key?(:country_code)
+        self.country_code = attributes[:country_code]
       end
 
-      if attributes.key?(:'full_name')
-        self.full_name = attributes[:'full_name']
+      if attributes.key?(:full_name)
+        self.full_name = attributes[:full_name]
       end
 
-      if attributes.key?(:'geo')
-        self.geo = attributes[:'geo']
+      if attributes.key?(:geo)
+        self.geo = attributes[:geo]
       end
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:id)
+        self.id = attributes[:id]
       end
 
-      if attributes.key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.key?(:name)
+        self.name = attributes[:name]
       end
 
-      if attributes.key?(:'place_type')
-        self.place_type = attributes[:'place_type']
+      if attributes.key?(:place_type)
+        self.place_type = attributes[:place_type]
       end
     end
 

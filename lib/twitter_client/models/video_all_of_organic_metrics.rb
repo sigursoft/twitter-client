@@ -37,12 +37,12 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'playback_0_count' => :'playback_0_count',
-        :'playback_100_count' => :'playback_100_count',
-        :'playback_25_count' => :'playback_25_count',
-        :'playback_50_count' => :'playback_50_count',
-        :'playback_75_count' => :'playback_75_count',
-        :'view_count' => :'view_count'
+        :playback_0_count => :playback_0_count,
+        :playback_100_count => :playback_100_count,
+        :playback_25_count => :playback_25_count,
+        :playback_50_count => :playback_50_count,
+        :playback_75_count => :playback_75_count,
+        :view_count => :view_count
       }
     end
 
@@ -54,12 +54,12 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'playback_0_count' => :'Integer',
-        :'playback_100_count' => :'Integer',
-        :'playback_25_count' => :'Integer',
-        :'playback_50_count' => :'Integer',
-        :'playback_75_count' => :'Integer',
-        :'view_count' => :'Integer'
+        :playback_0_count => :Integer,
+        :playback_100_count => :Integer,
+        :playback_25_count => :Integer,
+        :playback_50_count => :Integer,
+        :playback_75_count => :Integer,
+        :view_count => :Integer
       }
     end
 
@@ -84,28 +84,28 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'playback_0_count')
-        self.playback_0_count = attributes[:'playback_0_count']
+      if attributes.key?(:playback_0_count)
+        self.playback_0_count = attributes[:playback_0_count]
       end
 
-      if attributes.key?(:'playback_100_count')
-        self.playback_100_count = attributes[:'playback_100_count']
+      if attributes.key?(:playback_100_count)
+        self.playback_100_count = attributes[:playback_100_count]
       end
 
-      if attributes.key?(:'playback_25_count')
-        self.playback_25_count = attributes[:'playback_25_count']
+      if attributes.key?(:playback_25_count)
+        self.playback_25_count = attributes[:playback_25_count]
       end
 
-      if attributes.key?(:'playback_50_count')
-        self.playback_50_count = attributes[:'playback_50_count']
+      if attributes.key?(:playback_50_count)
+        self.playback_50_count = attributes[:playback_50_count]
       end
 
-      if attributes.key?(:'playback_75_count')
-        self.playback_75_count = attributes[:'playback_75_count']
+      if attributes.key?(:playback_75_count)
+        self.playback_75_count = attributes[:playback_75_count]
       end
 
-      if attributes.key?(:'view_count')
-        self.view_count = attributes[:'view_count']
+      if attributes.key?(:view_count)
+        self.view_count = attributes[:view_count]
       end
     end
 

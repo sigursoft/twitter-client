@@ -22,7 +22,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'view_count' => :'view_count'
+        :view_count => :view_count
       }
     end
 
@@ -34,7 +34,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'view_count' => :'Integer'
+        :view_count => :Integer
       }
     end
 
@@ -59,8 +59,8 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'view_count')
-        self.view_count = attributes[:'view_count']
+      if attributes.key?(:view_count)
+        self.view_count = attributes[:view_count]
       end
     end
 

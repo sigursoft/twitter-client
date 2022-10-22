@@ -51,17 +51,17 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'_end' => :'end',
-        :'start' => :'start',
-        :'description' => :'description',
-        :'display_url' => :'display_url',
-        :'expanded_url' => :'expanded_url',
-        :'images' => :'images',
-        :'media_key' => :'media_key',
-        :'status' => :'status',
-        :'title' => :'title',
-        :'unwound_url' => :'unwound_url',
-        :'url' => :'url'
+        :_end => :end,
+        :start => :start,
+        :description => :description,
+        :display_url => :display_url,
+        :expanded_url => :expanded_url,
+        :images => :images,
+        :media_key => :media_key,
+        :status => :status,
+        :title => :title,
+        :unwound_url => :unwound_url,
+        :url => :url
       }
     end
 
@@ -73,17 +73,17 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'_end' => :'Integer',
-        :'start' => :'Integer',
-        :'description' => :'String',
-        :'display_url' => :'String',
-        :'expanded_url' => :'String',
-        :'images' => :'Array<UrlImage>',
-        :'media_key' => :'String',
-        :'status' => :'Integer',
-        :'title' => :'String',
-        :'unwound_url' => :'String',
-        :'url' => :'String'
+        :_end => :Integer,
+        :start => :Integer,
+        :description => :String,
+        :display_url => :String,
+        :expanded_url => :String,
+        :images => :'Array<UrlImage>',
+        :media_key => :String,
+        :status => :Integer,
+        :title => :String,
+        :unwound_url => :String,
+        :url => :String
       }
     end
 
@@ -96,8 +96,8 @@ module TwitterClient
     # List of class defined in allOf (OpenAPI v3)
     def self.openapi_all_of
       [
-      :'EntityIndicesInclusiveExclusive',
-      :'UrlFields'
+      :EntityIndicesInclusiveExclusive,
+      :UrlFields
       ]
     end
 
@@ -116,50 +116,50 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'_end')
-        self._end = attributes[:'_end']
+      if attributes.key?(:_end)
+        self._end = attributes[:_end]
       end
 
-      if attributes.key?(:'start')
-        self.start = attributes[:'start']
+      if attributes.key?(:start)
+        self.start = attributes[:start]
       end
 
-      if attributes.key?(:'description')
-        self.description = attributes[:'description']
+      if attributes.key?(:description)
+        self.description = attributes[:description]
       end
 
-      if attributes.key?(:'display_url')
-        self.display_url = attributes[:'display_url']
+      if attributes.key?(:display_url)
+        self.display_url = attributes[:display_url]
       end
 
-      if attributes.key?(:'expanded_url')
-        self.expanded_url = attributes[:'expanded_url']
+      if attributes.key?(:expanded_url)
+        self.expanded_url = attributes[:expanded_url]
       end
 
-      if attributes.key?(:'images')
-        if (value = attributes[:'images']).is_a?(Array)
+      if attributes.key?(:images)
+        if (value = attributes[:images]).is_a?(Array)
           self.images = value
         end
       end
 
-      if attributes.key?(:'media_key')
-        self.media_key = attributes[:'media_key']
+      if attributes.key?(:media_key)
+        self.media_key = attributes[:media_key]
       end
 
-      if attributes.key?(:'status')
-        self.status = attributes[:'status']
+      if attributes.key?(:status)
+        self.status = attributes[:status]
       end
 
-      if attributes.key?(:'title')
-        self.title = attributes[:'title']
+      if attributes.key?(:title)
+        self.title = attributes[:title]
       end
 
-      if attributes.key?(:'unwound_url')
-        self.unwound_url = attributes[:'unwound_url']
+      if attributes.key?(:unwound_url)
+        self.unwound_url = attributes[:unwound_url]
       end
 
-      if attributes.key?(:'url')
-        self.url = attributes[:'url']
+      if attributes.key?(:url)
+        self.url = attributes[:url]
       end
     end
 

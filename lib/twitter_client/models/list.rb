@@ -38,14 +38,14 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'created_at' => :'created_at',
-        :'description' => :'description',
-        :'follower_count' => :'follower_count',
-        :'id' => :'id',
-        :'member_count' => :'member_count',
-        :'name' => :'name',
-        :'owner_id' => :'owner_id',
-        :'private' => :'private'
+        :created_at => :created_at,
+        :description => :description,
+        :follower_count => :follower_count,
+        :id => :id,
+        :member_count => :member_count,
+        :name => :name,
+        :owner_id => :owner_id,
+        :private => :private
       }
     end
 
@@ -57,14 +57,14 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'created_at' => :'Time',
-        :'description' => :'String',
-        :'follower_count' => :'Integer',
-        :'id' => :'String',
-        :'member_count' => :'Integer',
-        :'name' => :'String',
-        :'owner_id' => :'String',
-        :'private' => :'Boolean'
+        :created_at => :Time,
+        :description => :String,
+        :follower_count => :Integer,
+        :id => :String,
+        :member_count => :Integer,
+        :name => :String,
+        :owner_id => :String,
+        :private => :Boolean
       }
     end
 
@@ -89,36 +89,36 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'created_at')
-        self.created_at = attributes[:'created_at']
+      if attributes.key?(:created_at)
+        self.created_at = attributes[:created_at]
       end
 
-      if attributes.key?(:'description')
-        self.description = attributes[:'description']
+      if attributes.key?(:description)
+        self.description = attributes[:description]
       end
 
-      if attributes.key?(:'follower_count')
-        self.follower_count = attributes[:'follower_count']
+      if attributes.key?(:follower_count)
+        self.follower_count = attributes[:follower_count]
       end
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:id)
+        self.id = attributes[:id]
       end
 
-      if attributes.key?(:'member_count')
-        self.member_count = attributes[:'member_count']
+      if attributes.key?(:member_count)
+        self.member_count = attributes[:member_count]
       end
 
-      if attributes.key?(:'name')
-        self.name = attributes[:'name']
+      if attributes.key?(:name)
+        self.name = attributes[:name]
       end
 
-      if attributes.key?(:'owner_id')
-        self.owner_id = attributes[:'owner_id']
+      if attributes.key?(:owner_id)
+        self.owner_id = attributes[:owner_id]
       end
 
-      if attributes.key?(:'private')
-        self.private = attributes[:'private']
+      if attributes.key?(:private)
+        self.private = attributes[:private]
       end
     end
 

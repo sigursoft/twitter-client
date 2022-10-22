@@ -20,7 +20,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'public_tweet_unviewable' => :'public_tweet_unviewable'
+        :public_tweet_unviewable => :public_tweet_unviewable
       }
     end
 
@@ -32,7 +32,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'public_tweet_unviewable' => :'TweetUnviewable'
+        :public_tweet_unviewable => :TweetUnviewable
       }
     end
 
@@ -57,8 +57,8 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'public_tweet_unviewable')
-        self.public_tweet_unviewable = attributes[:'public_tweet_unviewable']
+      if attributes.key?(:public_tweet_unviewable)
+        self.public_tweet_unviewable = attributes[:public_tweet_unviewable]
       end
     end
 

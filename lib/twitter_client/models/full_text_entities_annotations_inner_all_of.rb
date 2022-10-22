@@ -28,9 +28,9 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'normalized_text' => :'normalized_text',
-        :'probability' => :'probability',
-        :'type' => :'type'
+        :normalized_text => :normalized_text,
+        :probability => :probability,
+        :type => :type
       }
     end
 
@@ -42,9 +42,9 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'normalized_text' => :'String',
-        :'probability' => :'Float',
-        :'type' => :'String'
+        :normalized_text => :String,
+        :probability => :Float,
+        :type => :String
       }
     end
 
@@ -69,16 +69,16 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'normalized_text')
-        self.normalized_text = attributes[:'normalized_text']
+      if attributes.key?(:normalized_text)
+        self.normalized_text = attributes[:normalized_text]
       end
 
-      if attributes.key?(:'probability')
-        self.probability = attributes[:'probability']
+      if attributes.key?(:probability)
+        self.probability = attributes[:probability]
       end
 
-      if attributes.key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.key?(:type)
+        self.type = attributes[:type]
       end
     end
 

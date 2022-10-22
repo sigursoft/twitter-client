@@ -23,8 +23,8 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'domain' => :'domain',
-        :'entity' => :'entity'
+        :domain => :domain,
+        :entity => :entity
       }
     end
 
@@ -36,8 +36,8 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'domain' => :'ContextAnnotationDomainFields',
-        :'entity' => :'ContextAnnotationEntityFields'
+        :domain => :ContextAnnotationDomainFields,
+        :entity => :ContextAnnotationEntityFields
       }
     end
 
@@ -62,12 +62,12 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'domain')
-        self.domain = attributes[:'domain']
+      if attributes.key?(:domain)
+        self.domain = attributes[:domain]
       end
 
-      if attributes.key?(:'entity')
-        self.entity = attributes[:'entity']
+      if attributes.key?(:entity)
+        self.entity = attributes[:entity]
       end
     end
 

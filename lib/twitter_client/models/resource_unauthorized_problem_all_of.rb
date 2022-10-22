@@ -50,11 +50,11 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'parameter' => :'parameter',
-        :'resource_id' => :'resource_id',
-        :'resource_type' => :'resource_type',
-        :'section' => :'section',
-        :'value' => :'value'
+        :parameter => :parameter,
+        :resource_id => :resource_id,
+        :resource_type => :resource_type,
+        :section => :section,
+        :value => :value
       }
     end
 
@@ -66,11 +66,11 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'parameter' => :'String',
-        :'resource_id' => :'String',
-        :'resource_type' => :'String',
-        :'section' => :'String',
-        :'value' => :'String'
+        :parameter => :String,
+        :resource_id => :String,
+        :resource_type => :String,
+        :section => :String,
+        :value => :String
       }
     end
 
@@ -95,24 +95,24 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'parameter')
-        self.parameter = attributes[:'parameter']
+      if attributes.key?(:parameter)
+        self.parameter = attributes[:parameter]
       end
 
-      if attributes.key?(:'resource_id')
-        self.resource_id = attributes[:'resource_id']
+      if attributes.key?(:resource_id)
+        self.resource_id = attributes[:resource_id]
       end
 
-      if attributes.key?(:'resource_type')
-        self.resource_type = attributes[:'resource_type']
+      if attributes.key?(:resource_type)
+        self.resource_type = attributes[:resource_type]
       end
 
-      if attributes.key?(:'section')
-        self.section = attributes[:'section']
+      if attributes.key?(:section)
+        self.section = attributes[:section]
       end
 
-      if attributes.key?(:'value')
-        self.value = attributes[:'value']
+      if attributes.key?(:value)
+        self.value = attributes[:value]
       end
     end
 

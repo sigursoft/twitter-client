@@ -30,12 +30,12 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'media' => :'media',
-        :'places' => :'places',
-        :'polls' => :'polls',
-        :'topics' => :'topics',
-        :'tweets' => :'tweets',
-        :'users' => :'users'
+        :media => :media,
+        :places => :places,
+        :polls => :polls,
+        :topics => :topics,
+        :tweets => :tweets,
+        :users => :users
       }
     end
 
@@ -47,12 +47,12 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'media' => :'Array<Media>',
-        :'places' => :'Array<Place>',
-        :'polls' => :'Array<Poll>',
-        :'topics' => :'Array<Topic>',
-        :'tweets' => :'Array<Tweet>',
-        :'users' => :'Array<User>'
+        :media => :'Array<Media>',
+        :places => :'Array<Place>',
+        :polls => :'Array<Poll>',
+        :topics => :'Array<Topic>',
+        :tweets => :'Array<Tweet>',
+        :users => :'Array<User>'
       }
     end
 
@@ -77,38 +77,38 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'media')
-        if (value = attributes[:'media']).is_a?(Array)
+      if attributes.key?(:media)
+        if (value = attributes[:media]).is_a?(Array)
           self.media = value
         end
       end
 
-      if attributes.key?(:'places')
-        if (value = attributes[:'places']).is_a?(Array)
+      if attributes.key?(:places)
+        if (value = attributes[:places]).is_a?(Array)
           self.places = value
         end
       end
 
-      if attributes.key?(:'polls')
-        if (value = attributes[:'polls']).is_a?(Array)
+      if attributes.key?(:polls)
+        if (value = attributes[:polls]).is_a?(Array)
           self.polls = value
         end
       end
 
-      if attributes.key?(:'topics')
-        if (value = attributes[:'topics']).is_a?(Array)
+      if attributes.key?(:topics)
+        if (value = attributes[:topics]).is_a?(Array)
           self.topics = value
         end
       end
 
-      if attributes.key?(:'tweets')
-        if (value = attributes[:'tweets']).is_a?(Array)
+      if attributes.key?(:tweets)
+        if (value = attributes[:tweets]).is_a?(Array)
           self.tweets = value
         end
       end
 
-      if attributes.key?(:'users')
-        if (value = attributes[:'users']).is_a?(Array)
+      if attributes.key?(:users)
+        if (value = attributes[:users]).is_a?(Array)
           self.users = value
         end
       end

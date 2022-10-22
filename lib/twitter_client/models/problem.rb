@@ -27,10 +27,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'detail' => :'detail',
-        :'status' => :'status',
-        :'title' => :'title',
-        :'type' => :'type'
+        :detail => :detail,
+        :status => :status,
+        :title => :title,
+        :type => :type
       }
     end
 
@@ -42,10 +42,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'detail' => :'String',
-        :'status' => :'Integer',
-        :'title' => :'String',
-        :'type' => :'String'
+        :detail => :String,
+        :status => :Integer,
+        :title => :String,
+        :type => :String
       }
     end
 
@@ -57,7 +57,7 @@ module TwitterClient
 
     # discriminator's property name in OpenAPI v3
     def self.openapi_discriminator_name
-      :'type'
+      :type
     end
 
     # Initializes the object
@@ -75,20 +75,20 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'detail')
-        self.detail = attributes[:'detail']
+      if attributes.key?(:detail)
+        self.detail = attributes[:detail]
       end
 
-      if attributes.key?(:'status')
-        self.status = attributes[:'status']
+      if attributes.key?(:status)
+        self.status = attributes[:status]
       end
 
-      if attributes.key?(:'title')
-        self.title = attributes[:'title']
+      if attributes.key?(:title)
+        self.title = attributes[:title]
       end
 
-      if attributes.key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.key?(:type)
+        self.type = attributes[:type]
       end
     end
 

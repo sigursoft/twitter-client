@@ -28,10 +28,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'event_at' => :'event_at',
-        :'quote_tweet_id' => :'quote_tweet_id',
-        :'tweet' => :'tweet',
-        :'withheld_in_countries' => :'withheld_in_countries'
+        :event_at => :event_at,
+        :quote_tweet_id => :quote_tweet_id,
+        :tweet => :tweet,
+        :withheld_in_countries => :withheld_in_countries
       }
     end
 
@@ -43,10 +43,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'event_at' => :'Time',
-        :'quote_tweet_id' => :'String',
-        :'tweet' => :'TweetComplianceSchemaTweet',
-        :'withheld_in_countries' => :'Array<String>'
+        :event_at => :Time,
+        :quote_tweet_id => :String,
+        :tweet => :TweetComplianceSchemaTweet,
+        :withheld_in_countries => :'Array<String>'
       }
     end
 
@@ -71,20 +71,20 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'event_at')
-        self.event_at = attributes[:'event_at']
+      if attributes.key?(:event_at)
+        self.event_at = attributes[:event_at]
       end
 
-      if attributes.key?(:'quote_tweet_id')
-        self.quote_tweet_id = attributes[:'quote_tweet_id']
+      if attributes.key?(:quote_tweet_id)
+        self.quote_tweet_id = attributes[:quote_tweet_id]
       end
 
-      if attributes.key?(:'tweet')
-        self.tweet = attributes[:'tweet']
+      if attributes.key?(:tweet)
+        self.tweet = attributes[:tweet]
       end
 
-      if attributes.key?(:'withheld_in_countries')
-        if (value = attributes[:'withheld_in_countries']).is_a?(Array)
+      if attributes.key?(:withheld_in_countries)
+        if (value = attributes[:withheld_in_countries]).is_a?(Array)
           self.withheld_in_countries = value
         end
       end

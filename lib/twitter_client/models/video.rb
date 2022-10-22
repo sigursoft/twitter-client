@@ -33,13 +33,13 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'duration_ms' => :'duration_ms',
-        :'non_public_metrics' => :'non_public_metrics',
-        :'organic_metrics' => :'organic_metrics',
-        :'preview_image_url' => :'preview_image_url',
-        :'promoted_metrics' => :'promoted_metrics',
-        :'public_metrics' => :'public_metrics',
-        :'variants' => :'variants'
+        :duration_ms => :duration_ms,
+        :non_public_metrics => :non_public_metrics,
+        :organic_metrics => :organic_metrics,
+        :preview_image_url => :preview_image_url,
+        :promoted_metrics => :promoted_metrics,
+        :public_metrics => :public_metrics,
+        :variants => :variants
       }
     end
 
@@ -51,13 +51,13 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'duration_ms' => :'Integer',
-        :'non_public_metrics' => :'VideoAllOfNonPublicMetrics',
-        :'organic_metrics' => :'VideoAllOfOrganicMetrics',
-        :'preview_image_url' => :'String',
-        :'promoted_metrics' => :'VideoAllOfPromotedMetrics',
-        :'public_metrics' => :'VideoAllOfPublicMetrics',
-        :'variants' => :'Array<Variant>'
+        :duration_ms => :Integer,
+        :non_public_metrics => :VideoAllOfNonPublicMetrics,
+        :organic_metrics => :VideoAllOfOrganicMetrics,
+        :preview_image_url => :String,
+        :promoted_metrics => :VideoAllOfPromotedMetrics,
+        :public_metrics => :VideoAllOfPublicMetrics,
+        :variants => :'Array<Variant>'
       }
     end
 
@@ -70,8 +70,8 @@ module TwitterClient
     # List of class defined in allOf (OpenAPI v3)
     def self.openapi_all_of
       [
-      :'Media',
-      :'VideoAllOf'
+      :Media,
+      :VideoAllOf
       ]
     end
 
@@ -93,32 +93,32 @@ module TwitterClient
       # call parent's initialize
       super(attributes)
 
-      if attributes.key?(:'duration_ms')
-        self.duration_ms = attributes[:'duration_ms']
+      if attributes.key?(:duration_ms)
+        self.duration_ms = attributes[:duration_ms]
       end
 
-      if attributes.key?(:'non_public_metrics')
-        self.non_public_metrics = attributes[:'non_public_metrics']
+      if attributes.key?(:non_public_metrics)
+        self.non_public_metrics = attributes[:non_public_metrics]
       end
 
-      if attributes.key?(:'organic_metrics')
-        self.organic_metrics = attributes[:'organic_metrics']
+      if attributes.key?(:organic_metrics)
+        self.organic_metrics = attributes[:organic_metrics]
       end
 
-      if attributes.key?(:'preview_image_url')
-        self.preview_image_url = attributes[:'preview_image_url']
+      if attributes.key?(:preview_image_url)
+        self.preview_image_url = attributes[:preview_image_url]
       end
 
-      if attributes.key?(:'promoted_metrics')
-        self.promoted_metrics = attributes[:'promoted_metrics']
+      if attributes.key?(:promoted_metrics)
+        self.promoted_metrics = attributes[:promoted_metrics]
       end
 
-      if attributes.key?(:'public_metrics')
-        self.public_metrics = attributes[:'public_metrics']
+      if attributes.key?(:public_metrics)
+        self.public_metrics = attributes[:public_metrics]
       end
 
-      if attributes.key?(:'variants')
-        if (value = attributes[:'variants']).is_a?(Array)
+      if attributes.key?(:variants)
+        if (value = attributes[:variants]).is_a?(Array)
           self.variants = value
         end
       end

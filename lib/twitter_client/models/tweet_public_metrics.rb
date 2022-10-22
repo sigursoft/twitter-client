@@ -31,10 +31,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'like_count' => :'like_count',
-        :'quote_count' => :'quote_count',
-        :'reply_count' => :'reply_count',
-        :'retweet_count' => :'retweet_count'
+        :like_count => :like_count,
+        :quote_count => :quote_count,
+        :reply_count => :reply_count,
+        :retweet_count => :retweet_count
       }
     end
 
@@ -46,10 +46,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'like_count' => :'Integer',
-        :'quote_count' => :'Integer',
-        :'reply_count' => :'Integer',
-        :'retweet_count' => :'Integer'
+        :like_count => :Integer,
+        :quote_count => :Integer,
+        :reply_count => :Integer,
+        :retweet_count => :Integer
       }
     end
 
@@ -74,20 +74,20 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'like_count')
-        self.like_count = attributes[:'like_count']
+      if attributes.key?(:like_count)
+        self.like_count = attributes[:like_count]
       end
 
-      if attributes.key?(:'quote_count')
-        self.quote_count = attributes[:'quote_count']
+      if attributes.key?(:quote_count)
+        self.quote_count = attributes[:quote_count]
       end
 
-      if attributes.key?(:'reply_count')
-        self.reply_count = attributes[:'reply_count']
+      if attributes.key?(:reply_count)
+        self.reply_count = attributes[:reply_count]
       end
 
-      if attributes.key?(:'retweet_count')
-        self.retweet_count = attributes[:'retweet_count']
+      if attributes.key?(:retweet_count)
+        self.retweet_count = attributes[:retweet_count]
       end
     end
 

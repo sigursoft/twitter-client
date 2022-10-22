@@ -52,11 +52,11 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'duration_minutes' => :'duration_minutes',
-        :'end_datetime' => :'end_datetime',
-        :'id' => :'id',
-        :'options' => :'options',
-        :'voting_status' => :'voting_status'
+        :duration_minutes => :duration_minutes,
+        :end_datetime => :end_datetime,
+        :id => :id,
+        :options => :options,
+        :voting_status => :voting_status
       }
     end
 
@@ -68,11 +68,11 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'duration_minutes' => :'Integer',
-        :'end_datetime' => :'Time',
-        :'id' => :'String',
-        :'options' => :'Array<PollOption>',
-        :'voting_status' => :'String'
+        :duration_minutes => :Integer,
+        :end_datetime => :Time,
+        :id => :String,
+        :options => :'Array<PollOption>',
+        :voting_status => :String
       }
     end
 
@@ -97,26 +97,26 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'duration_minutes')
-        self.duration_minutes = attributes[:'duration_minutes']
+      if attributes.key?(:duration_minutes)
+        self.duration_minutes = attributes[:duration_minutes]
       end
 
-      if attributes.key?(:'end_datetime')
-        self.end_datetime = attributes[:'end_datetime']
+      if attributes.key?(:end_datetime)
+        self.end_datetime = attributes[:end_datetime]
       end
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:id)
+        self.id = attributes[:id]
       end
 
-      if attributes.key?(:'options')
-        if (value = attributes[:'options']).is_a?(Array)
+      if attributes.key?(:options)
+        if (value = attributes[:options]).is_a?(Array)
           self.options = value
         end
       end
 
-      if attributes.key?(:'voting_status')
-        self.voting_status = attributes[:'voting_status']
+      if attributes.key?(:voting_status)
+        self.voting_status = attributes[:voting_status]
       end
     end
 

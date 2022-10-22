@@ -20,7 +20,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'undrop' => :'undrop'
+        :undrop => :undrop
       }
     end
 
@@ -32,7 +32,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'undrop' => :'TweetComplianceSchema'
+        :undrop => :TweetComplianceSchema
       }
     end
 
@@ -57,8 +57,8 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'undrop')
-        self.undrop = attributes[:'undrop']
+      if attributes.key?(:undrop)
+        self.undrop = attributes[:undrop]
       end
     end
 

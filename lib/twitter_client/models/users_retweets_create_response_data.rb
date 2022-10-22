@@ -20,7 +20,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'retweeted' => :'retweeted'
+        :retweeted => :retweeted
       }
     end
 
@@ -32,7 +32,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'retweeted' => :'Boolean'
+        :retweeted => :Boolean
       }
     end
 
@@ -57,8 +57,8 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'retweeted')
-        self.retweeted = attributes[:'retweeted']
+      if attributes.key?(:retweeted)
+        self.retweeted = attributes[:retweeted]
       end
     end
 

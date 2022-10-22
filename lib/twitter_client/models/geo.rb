@@ -48,10 +48,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'bbox' => :'bbox',
-        :'geometry' => :'geometry',
-        :'properties' => :'properties',
-        :'type' => :'type'
+        :bbox => :bbox,
+        :geometry => :geometry,
+        :properties => :properties,
+        :type => :type
       }
     end
 
@@ -63,10 +63,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'bbox' => :'Array<Float>',
-        :'geometry' => :'Point',
-        :'properties' => :'Object',
-        :'type' => :'String'
+        :bbox => :'Array<Float>',
+        :geometry => :Point,
+        :properties => :Object,
+        :type => :String
       }
     end
 
@@ -91,22 +91,22 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'bbox')
-        if (value = attributes[:'bbox']).is_a?(Array)
+      if attributes.key?(:bbox)
+        if (value = attributes[:bbox]).is_a?(Array)
           self.bbox = value
         end
       end
 
-      if attributes.key?(:'geometry')
-        self.geometry = attributes[:'geometry']
+      if attributes.key?(:geometry)
+        self.geometry = attributes[:geometry]
       end
 
-      if attributes.key?(:'properties')
-        self.properties = attributes[:'properties']
+      if attributes.key?(:properties)
+        self.properties = attributes[:properties]
       end
 
-      if attributes.key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.key?(:type)
+        self.type = attributes[:type]
       end
     end
 

@@ -60,7 +60,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"GeneralApi.get_open_api_spec",
+        :operation => :'GeneralApi.get_open_api_spec',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,

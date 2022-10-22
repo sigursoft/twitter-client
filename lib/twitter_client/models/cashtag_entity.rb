@@ -26,9 +26,9 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'_end' => :'end',
-        :'start' => :'start',
-        :'tag' => :'tag'
+        :_end => :end,
+        :start => :start,
+        :tag => :tag
       }
     end
 
@@ -40,9 +40,9 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'_end' => :'Integer',
-        :'start' => :'Integer',
-        :'tag' => :'String'
+        :_end => :Integer,
+        :start => :Integer,
+        :tag => :String
       }
     end
 
@@ -55,8 +55,8 @@ module TwitterClient
     # List of class defined in allOf (OpenAPI v3)
     def self.openapi_all_of
       [
-      :'CashtagFields',
-      :'EntityIndicesInclusiveExclusive'
+      :CashtagFields,
+      :EntityIndicesInclusiveExclusive
       ]
     end
 
@@ -75,16 +75,16 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'_end')
-        self._end = attributes[:'_end']
+      if attributes.key?(:_end)
+        self._end = attributes[:_end]
       end
 
-      if attributes.key?(:'start')
-        self.start = attributes[:'start']
+      if attributes.key?(:start)
+        self.start = attributes[:start]
       end
 
-      if attributes.key?(:'tag')
-        self.tag = attributes[:'tag']
+      if attributes.key?(:tag)
+        self.tag = attributes[:tag]
       end
     end
 

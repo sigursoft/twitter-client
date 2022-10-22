@@ -58,63 +58,63 @@ module TwitterClient
       if @api_client.config.client_side_validation && id.nil?
         fail ArgumentError, "Missing the required parameter 'id' when calling BookmarksApi.get_users_id_bookmarks"
       end
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling BookmarksApi.get_users_id_bookmarks, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 1
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 1
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling BookmarksApi.get_users_id_bookmarks, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling BookmarksApi.get_users_id_bookmarks, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling BookmarksApi.get_users_id_bookmarks, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling BookmarksApi.get_users_id_bookmarks, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling BookmarksApi.get_users_id_bookmarks, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling BookmarksApi.get_users_id_bookmarks, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling BookmarksApi.get_users_id_bookmarks, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling BookmarksApi.get_users_id_bookmarks, number of items must be greater than or equal to 1.'
       end
 
@@ -123,14 +123,14 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -150,7 +150,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken']
 
       new_options = opts.merge(
-        :operation => :"BookmarksApi.get_users_id_bookmarks",
+        :operation => :'BookmarksApi.get_users_id_bookmarks',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -224,7 +224,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken']
 
       new_options = opts.merge(
-        :operation => :"BookmarksApi.post_users_id_bookmarks",
+        :operation => :'BookmarksApi.post_users_id_bookmarks',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -298,7 +298,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken']
 
       new_options = opts.merge(
-        :operation => :"BookmarksApi.users_id_bookmarks_delete",
+        :operation => :'BookmarksApi.users_id_bookmarks_delete',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,

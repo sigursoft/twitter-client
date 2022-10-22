@@ -49,7 +49,7 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'dry_run'] = opts[:'dry_run'] if !opts[:'dry_run'].nil?
+      query_params[:dry_run] = opts[:dry_run] if !opts[:dry_run].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -74,7 +74,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.add_or_delete_rules",
+        :operation => :'TweetsApi.add_or_delete_rules',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -142,7 +142,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.create_tweet",
+        :operation => :'TweetsApi.create_tweet',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -210,7 +210,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.delete_tweet_by_id",
+        :operation => :'TweetsApi.delete_tweet_by_id',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -267,50 +267,50 @@ module TwitterClient
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.find_tweet_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.find_tweet_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.find_tweet_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.find_tweet_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.find_tweet_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.find_tweet_by_id, number of items must be greater than or equal to 1.'
       end
 
@@ -319,12 +319,12 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -344,7 +344,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.find_tweet_by_id",
+        :operation => :'TweetsApi.find_tweet_by_id',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -404,50 +404,50 @@ module TwitterClient
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.find_tweets_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.find_tweets_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.find_tweets_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.find_tweets_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.find_tweets_by_id, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.find_tweets_by_id, number of items must be greater than or equal to 1.'
       end
 
@@ -456,13 +456,13 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'ids'] = @api_client.build_collection_param(ids, :csv)
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:ids] = @api_client.build_collection_param(ids, :csv)
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -482,7 +482,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.find_tweets_by_id",
+        :operation => :'TweetsApi.find_tweets_by_id',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -544,71 +544,71 @@ module TwitterClient
         fail ArgumentError, "invalid value for 'id' when calling TweetsApi.find_tweets_that_quote_a_tweet, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 10
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 10
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, must be greater than or equal to 10.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["replies", "retweets"]
-      if @api_client.config.client_side_validation && opts[:'exclude'] && !opts[:'exclude'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:exclude] && !opts[:exclude].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"exclude\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'exclude'].nil? && opts[:'exclude'].length < 1
+      if @api_client.config.client_side_validation && !opts[:exclude].nil? && opts[:exclude].length < 1
         fail ArgumentError, 'invalid value for "opts[:"exclude"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.find_tweets_that_quote_a_tweet, number of items must be greater than or equal to 1.'
       end
 
@@ -617,15 +617,15 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'exclude'] = @api_client.build_collection_param(opts[:'exclude'], :csv) if !opts[:'exclude'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:exclude] = @api_client.build_collection_param(opts[:exclude], :csv) if !opts[:exclude].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -645,7 +645,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.find_tweets_that_quote_a_tweet",
+        :operation => :'TweetsApi.find_tweets_that_quote_a_tweet',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -684,19 +684,19 @@ module TwitterClient
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TweetsApi.get_rules ...'
       end
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 1000
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 1000
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.get_rules, must be smaller than or equal to 1000.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 1
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 1
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.get_rules, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length > 16
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length > 16
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.get_rules, the character length must be smaller than or equal to 16.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 16
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 16
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.get_rules, the character length must be great than or equal to 16.'
       end
 
@@ -705,9 +705,9 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'ids'] = @api_client.build_collection_param(opts[:'ids'], :multi) if !opts[:'ids'].nil?
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
+      query_params[:ids] = @api_client.build_collection_param(opts[:ids], :multi) if !opts[:ids].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -727,7 +727,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.get_rules",
+        :operation => :'TweetsApi.get_rules',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -792,59 +792,59 @@ module TwitterClient
         fail ArgumentError, 'invalid value for "partition" when calling TweetsApi.get_tweets_firehose_stream, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] > 5
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] > 5
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling TweetsApi.get_tweets_firehose_stream, must be smaller than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] < 0
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] < 0
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling TweetsApi.get_tweets_firehose_stream, must be greater than or equal to 0.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.get_tweets_firehose_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.get_tweets_firehose_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.get_tweets_firehose_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.get_tweets_firehose_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.get_tweets_firehose_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.get_tweets_firehose_stream, number of items must be greater than or equal to 1.'
       end
 
@@ -853,16 +853,16 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'partition'] = partition
-      query_params[:'backfill_minutes'] = opts[:'backfill_minutes'] if !opts[:'backfill_minutes'].nil?
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:partition] = partition
+      query_params[:backfill_minutes] = opts[:backfill_minutes] if !opts[:backfill_minutes].nil?
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -882,7 +882,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.get_tweets_firehose_stream",
+        :operation => :'TweetsApi.get_tweets_firehose_stream',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -947,59 +947,59 @@ module TwitterClient
         fail ArgumentError, 'invalid value for "partition" when calling TweetsApi.get_tweets_sample10_stream, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] > 5
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] > 5
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling TweetsApi.get_tweets_sample10_stream, must be smaller than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] < 0
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] < 0
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling TweetsApi.get_tweets_sample10_stream, must be greater than or equal to 0.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.get_tweets_sample10_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.get_tweets_sample10_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.get_tweets_sample10_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.get_tweets_sample10_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.get_tweets_sample10_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.get_tweets_sample10_stream, number of items must be greater than or equal to 1.'
       end
 
@@ -1008,16 +1008,16 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'partition'] = partition
-      query_params[:'backfill_minutes'] = opts[:'backfill_minutes'] if !opts[:'backfill_minutes'].nil?
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:partition] = partition
+      query_params[:backfill_minutes] = opts[:backfill_minutes] if !opts[:backfill_minutes].nil?
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -1037,7 +1037,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.get_tweets_sample10_stream",
+        :operation => :'TweetsApi.get_tweets_sample10_stream',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1103,7 +1103,7 @@ module TwitterClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'tweet_hide_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:tweet_hide_request])
 
       # return_type
       return_type = opts[:debug_return_type] || 'TweetHideResponse'
@@ -1112,7 +1112,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.hide_reply_by_id",
+        :operation => :'TweetsApi.hide_reply_by_id',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1172,63 +1172,63 @@ module TwitterClient
         fail ArgumentError, "invalid value for 'id' when calling TweetsApi.lists_id_tweets, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.lists_id_tweets, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 1
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 1
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.lists_id_tweets, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.lists_id_tweets, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.lists_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.lists_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.lists_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.lists_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.lists_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.lists_id_tweets, number of items must be greater than or equal to 1.'
       end
 
@@ -1237,14 +1237,14 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -1264,7 +1264,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.lists_id_tweets",
+        :operation => :'TweetsApi.lists_id_tweets',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1311,59 +1311,59 @@ module TwitterClient
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TweetsApi.sample_stream ...'
       end
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] > 5
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] > 5
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling TweetsApi.sample_stream, must be smaller than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] < 0
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] < 0
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling TweetsApi.sample_stream, must be greater than or equal to 0.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.sample_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.sample_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.sample_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.sample_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.sample_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.sample_stream, number of items must be greater than or equal to 1.'
       end
 
@@ -1372,13 +1372,13 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'backfill_minutes'] = opts[:'backfill_minutes'] if !opts[:'backfill_minutes'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:backfill_minutes] = opts[:backfill_minutes] if !opts[:backfill_minutes].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -1398,7 +1398,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.sample_stream",
+        :operation => :'TweetsApi.sample_stream',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1449,59 +1449,59 @@ module TwitterClient
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: TweetsApi.search_stream ...'
       end
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] > 5
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] > 5
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling TweetsApi.search_stream, must be smaller than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'backfill_minutes'].nil? && opts[:'backfill_minutes'] < 0
+      if @api_client.config.client_side_validation && !opts[:backfill_minutes].nil? && opts[:backfill_minutes] < 0
         fail ArgumentError, 'invalid value for "opts[:"backfill_minutes"]" when calling TweetsApi.search_stream, must be greater than or equal to 0.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.search_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.search_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.search_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.search_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.search_stream, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.search_stream, number of items must be greater than or equal to 1.'
       end
 
@@ -1510,15 +1510,15 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'backfill_minutes'] = opts[:'backfill_minutes'] if !opts[:'backfill_minutes'].nil?
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:backfill_minutes] = opts[:backfill_minutes] if !opts[:backfill_minutes].nil?
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -1538,7 +1538,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.search_stream",
+        :operation => :'TweetsApi.search_stream',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1592,39 +1592,39 @@ module TwitterClient
         fail ArgumentError, "invalid value for 'id' when calling TweetsApi.space_buyers, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 16
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 16
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.space_buyers, the character length must be great than or equal to 16.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.space_buyers, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 1
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 1
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.space_buyers, must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.space_buyers, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["pinned_tweet_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.space_buyers, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.space_buyers, number of items must be greater than or equal to 1.'
       end
 
@@ -1633,11 +1633,11 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -1657,7 +1657,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.space_buyers",
+        :operation => :'TweetsApi.space_buyers',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1715,59 +1715,59 @@ module TwitterClient
         fail ArgumentError, "invalid value for 'id' when calling TweetsApi.space_tweets, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.space_tweets, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 1
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 1
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.space_tweets, must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.space_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.space_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.space_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.space_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.space_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.space_tweets, number of items must be greater than or equal to 1.'
       end
 
@@ -1776,13 +1776,13 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -1802,7 +1802,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.space_tweets",
+        :operation => :'TweetsApi.space_tweets',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1866,32 +1866,32 @@ module TwitterClient
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'since_id'].nil? && opts[:'since_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:since_id].nil? && opts[:since_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"since_id\"]' when calling TweetsApi.tweet_counts_full_archive_search, must conform to the pattern #{pattern}."
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'until_id'].nil? && opts[:'until_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:until_id].nil? && opts[:until_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"until_id\"]' when calling TweetsApi.tweet_counts_full_archive_search, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'next_token'].nil? && opts[:'next_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:next_token].nil? && opts[:next_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"next_token"]" when calling TweetsApi.tweet_counts_full_archive_search, the character length must be great than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.tweet_counts_full_archive_search, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["minute", "hour", "day"]
-      if @api_client.config.client_side_validation && opts[:'granularity'] && !allowable_values.include?(opts[:'granularity'])
+      if @api_client.config.client_side_validation && opts[:granularity] && !allowable_values.include?(opts[:granularity])
         fail ArgumentError, "invalid value for \"granularity\", must be one of #{allowable_values}"
       end
       allowable_values = ["end", "start", "tweet_count"]
-      if @api_client.config.client_side_validation && opts[:'search_count_fields'] && !opts[:'search_count_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:search_count_fields] && !opts[:search_count_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"search_count_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'search_count_fields'].nil? && opts[:'search_count_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:search_count_fields].nil? && opts[:search_count_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"search_count_fields"]" when calling TweetsApi.tweet_counts_full_archive_search, number of items must be greater than or equal to 1.'
       end
 
@@ -1900,15 +1900,15 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'query'] = query
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'since_id'] = opts[:'since_id'] if !opts[:'since_id'].nil?
-      query_params[:'until_id'] = opts[:'until_id'] if !opts[:'until_id'].nil?
-      query_params[:'next_token'] = opts[:'next_token'] if !opts[:'next_token'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'granularity'] = opts[:'granularity'] if !opts[:'granularity'].nil?
-      query_params[:'search_count.fields'] = @api_client.build_collection_param(opts[:'search_count_fields'], :csv) if !opts[:'search_count_fields'].nil?
+      query_params[:query] = query
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:since_id] = opts[:since_id] if !opts[:since_id].nil?
+      query_params[:until_id] = opts[:until_id] if !opts[:until_id].nil?
+      query_params[:next_token] = opts[:next_token] if !opts[:next_token].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:granularity] = opts[:granularity] if !opts[:granularity].nil?
+      query_params[:'search_count.fields'] = @api_client.build_collection_param(opts[:search_count_fields], :csv) if !opts[:search_count_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -1928,7 +1928,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.tweet_counts_full_archive_search",
+        :operation => :'TweetsApi.tweet_counts_full_archive_search',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1992,32 +1992,32 @@ module TwitterClient
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'since_id'].nil? && opts[:'since_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:since_id].nil? && opts[:since_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"since_id\"]' when calling TweetsApi.tweet_counts_recent_search, must conform to the pattern #{pattern}."
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'until_id'].nil? && opts[:'until_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:until_id].nil? && opts[:until_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"until_id\"]' when calling TweetsApi.tweet_counts_recent_search, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'next_token'].nil? && opts[:'next_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:next_token].nil? && opts[:next_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"next_token"]" when calling TweetsApi.tweet_counts_recent_search, the character length must be great than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.tweet_counts_recent_search, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["minute", "hour", "day"]
-      if @api_client.config.client_side_validation && opts[:'granularity'] && !allowable_values.include?(opts[:'granularity'])
+      if @api_client.config.client_side_validation && opts[:granularity] && !allowable_values.include?(opts[:granularity])
         fail ArgumentError, "invalid value for \"granularity\", must be one of #{allowable_values}"
       end
       allowable_values = ["end", "start", "tweet_count"]
-      if @api_client.config.client_side_validation && opts[:'search_count_fields'] && !opts[:'search_count_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:search_count_fields] && !opts[:search_count_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"search_count_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'search_count_fields'].nil? && opts[:'search_count_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:search_count_fields].nil? && opts[:search_count_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"search_count_fields"]" when calling TweetsApi.tweet_counts_recent_search, number of items must be greater than or equal to 1.'
       end
 
@@ -2026,15 +2026,15 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'query'] = query
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'since_id'] = opts[:'since_id'] if !opts[:'since_id'].nil?
-      query_params[:'until_id'] = opts[:'until_id'] if !opts[:'until_id'].nil?
-      query_params[:'next_token'] = opts[:'next_token'] if !opts[:'next_token'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'granularity'] = opts[:'granularity'] if !opts[:'granularity'].nil?
-      query_params[:'search_count.fields'] = @api_client.build_collection_param(opts[:'search_count_fields'], :csv) if !opts[:'search_count_fields'].nil?
+      query_params[:query] = query
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:since_id] = opts[:since_id] if !opts[:since_id].nil?
+      query_params[:until_id] = opts[:until_id] if !opts[:until_id].nil?
+      query_params[:next_token] = opts[:next_token] if !opts[:next_token].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:granularity] = opts[:granularity] if !opts[:granularity].nil?
+      query_params[:'search_count.fields'] = @api_client.build_collection_param(opts[:search_count_fields], :csv) if !opts[:search_count_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -2054,7 +2054,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.tweet_counts_recent_search",
+        :operation => :'TweetsApi.tweet_counts_recent_search',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -2130,80 +2130,80 @@ module TwitterClient
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'since_id'].nil? && opts[:'since_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:since_id].nil? && opts[:since_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"since_id\"]' when calling TweetsApi.tweets_fullarchive_search, must conform to the pattern #{pattern}."
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'until_id'].nil? && opts[:'until_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:until_id].nil? && opts[:until_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"until_id\"]' when calling TweetsApi.tweets_fullarchive_search, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 500
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 500
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.tweets_fullarchive_search, must be smaller than or equal to 500.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 10
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 10
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.tweets_fullarchive_search, must be greater than or equal to 10.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'next_token'].nil? && opts[:'next_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:next_token].nil? && opts[:next_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"next_token"]" when calling TweetsApi.tweets_fullarchive_search, the character length must be great than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.tweets_fullarchive_search, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["recency", "relevancy"]
-      if @api_client.config.client_side_validation && opts[:'sort_order'] && !allowable_values.include?(opts[:'sort_order'])
+      if @api_client.config.client_side_validation && opts[:sort_order] && !allowable_values.include?(opts[:sort_order])
         fail ArgumentError, "invalid value for \"sort_order\", must be one of #{allowable_values}"
       end
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.tweets_fullarchive_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.tweets_fullarchive_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.tweets_fullarchive_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.tweets_fullarchive_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.tweets_fullarchive_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.tweets_fullarchive_search, number of items must be greater than or equal to 1.'
       end
 
@@ -2212,21 +2212,21 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'query'] = query
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'since_id'] = opts[:'since_id'] if !opts[:'since_id'].nil?
-      query_params[:'until_id'] = opts[:'until_id'] if !opts[:'until_id'].nil?
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'next_token'] = opts[:'next_token'] if !opts[:'next_token'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'sort_order'] = opts[:'sort_order'] if !opts[:'sort_order'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:query] = query
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:since_id] = opts[:since_id] if !opts[:since_id].nil?
+      query_params[:until_id] = opts[:until_id] if !opts[:until_id].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:next_token] = opts[:next_token] if !opts[:next_token].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:sort_order] = opts[:sort_order] if !opts[:sort_order].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -2246,7 +2246,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.tweets_fullarchive_search",
+        :operation => :'TweetsApi.tweets_fullarchive_search',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -2322,80 +2322,80 @@ module TwitterClient
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'since_id'].nil? && opts[:'since_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:since_id].nil? && opts[:since_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"since_id\"]' when calling TweetsApi.tweets_recent_search, must conform to the pattern #{pattern}."
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'until_id'].nil? && opts[:'until_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:until_id].nil? && opts[:until_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"until_id\"]' when calling TweetsApi.tweets_recent_search, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.tweets_recent_search, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 10
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 10
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.tweets_recent_search, must be greater than or equal to 10.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'next_token'].nil? && opts[:'next_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:next_token].nil? && opts[:next_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"next_token"]" when calling TweetsApi.tweets_recent_search, the character length must be great than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.tweets_recent_search, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["recency", "relevancy"]
-      if @api_client.config.client_side_validation && opts[:'sort_order'] && !allowable_values.include?(opts[:'sort_order'])
+      if @api_client.config.client_side_validation && opts[:sort_order] && !allowable_values.include?(opts[:sort_order])
         fail ArgumentError, "invalid value for \"sort_order\", must be one of #{allowable_values}"
       end
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.tweets_recent_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.tweets_recent_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.tweets_recent_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.tweets_recent_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.tweets_recent_search, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.tweets_recent_search, number of items must be greater than or equal to 1.'
       end
 
@@ -2404,21 +2404,21 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'query'] = query
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'since_id'] = opts[:'since_id'] if !opts[:'since_id'].nil?
-      query_params[:'until_id'] = opts[:'until_id'] if !opts[:'until_id'].nil?
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'next_token'] = opts[:'next_token'] if !opts[:'next_token'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'sort_order'] = opts[:'sort_order'] if !opts[:'sort_order'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:query] = query
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:since_id] = opts[:since_id] if !opts[:since_id].nil?
+      query_params[:until_id] = opts[:until_id] if !opts[:until_id].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:next_token] = opts[:next_token] if !opts[:next_token].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:sort_order] = opts[:sort_order] if !opts[:sort_order].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -2438,7 +2438,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.tweets_recent_search",
+        :operation => :'TweetsApi.tweets_recent_search',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -2499,7 +2499,7 @@ module TwitterClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'users_likes_create_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:users_likes_create_request])
 
       # return_type
       return_type = opts[:debug_return_type] || 'UsersLikesCreateResponse'
@@ -2508,7 +2508,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.users_id_like",
+        :operation => :'TweetsApi.users_id_like',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -2568,63 +2568,63 @@ module TwitterClient
         fail ArgumentError, "invalid value for 'id' when calling TweetsApi.users_id_liked_tweets, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.users_id_liked_tweets, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 5
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 5
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.users_id_liked_tweets, must be greater than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.users_id_liked_tweets, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.users_id_liked_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.users_id_liked_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.users_id_liked_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.users_id_liked_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.users_id_liked_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.users_id_liked_tweets, number of items must be greater than or equal to 1.'
       end
 
@@ -2633,14 +2633,14 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -2660,7 +2660,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.users_id_liked_tweets",
+        :operation => :'TweetsApi.users_id_liked_tweets',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -2729,72 +2729,72 @@ module TwitterClient
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'since_id'].nil? && opts[:'since_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:since_id].nil? && opts[:since_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"since_id\"]' when calling TweetsApi.users_id_mentions, must conform to the pattern #{pattern}."
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'until_id'].nil? && opts[:'until_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:until_id].nil? && opts[:until_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"until_id\"]' when calling TweetsApi.users_id_mentions, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.users_id_mentions, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 5
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 5
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.users_id_mentions, must be greater than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.users_id_mentions, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.users_id_mentions, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.users_id_mentions, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.users_id_mentions, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.users_id_mentions, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.users_id_mentions, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.users_id_mentions, number of items must be greater than or equal to 1.'
       end
 
@@ -2803,18 +2803,18 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'since_id'] = opts[:'since_id'] if !opts[:'since_id'].nil?
-      query_params[:'until_id'] = opts[:'until_id'] if !opts[:'until_id'].nil?
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:since_id] = opts[:since_id] if !opts[:since_id].nil?
+      query_params[:until_id] = opts[:until_id] if !opts[:until_id].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -2834,7 +2834,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.users_id_mentions",
+        :operation => :'TweetsApi.users_id_mentions',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -2895,7 +2895,7 @@ module TwitterClient
       form_params = opts[:form_params] || {}
 
       # http body (model)
-      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:'users_retweets_create_request'])
+      post_body = opts[:debug_body] || @api_client.object_to_http_body(opts[:users_retweets_create_request])
 
       # return_type
       return_type = opts[:debug_return_type] || 'UsersRetweetsCreateResponse'
@@ -2904,7 +2904,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.users_id_retweets",
+        :operation => :'TweetsApi.users_id_retweets',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -2970,76 +2970,76 @@ module TwitterClient
         fail ArgumentError, "Missing the required parameter 'id' when calling TweetsApi.users_id_timeline"
       end
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'since_id'].nil? && opts[:'since_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:since_id].nil? && opts[:since_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"since_id\"]' when calling TweetsApi.users_id_timeline, must conform to the pattern #{pattern}."
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'until_id'].nil? && opts[:'until_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:until_id].nil? && opts[:until_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"until_id\"]' when calling TweetsApi.users_id_timeline, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.users_id_timeline, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 1
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 1
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.users_id_timeline, must be greater than or equal to 1.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.users_id_timeline, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["replies", "retweets"]
-      if @api_client.config.client_side_validation && opts[:'exclude'] && !opts[:'exclude'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:exclude] && !opts[:exclude].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"exclude\", must include one of #{allowable_values}"
       end
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.users_id_timeline, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.users_id_timeline, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.users_id_timeline, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.users_id_timeline, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.users_id_timeline, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.users_id_timeline, number of items must be greater than or equal to 1.'
       end
 
@@ -3048,19 +3048,19 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'since_id'] = opts[:'since_id'] if !opts[:'since_id'].nil?
-      query_params[:'until_id'] = opts[:'until_id'] if !opts[:'until_id'].nil?
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'exclude'] = @api_client.build_collection_param(opts[:'exclude'], :csv) if !opts[:'exclude'].nil?
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:since_id] = opts[:since_id] if !opts[:since_id].nil?
+      query_params[:until_id] = opts[:until_id] if !opts[:until_id].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:exclude] = @api_client.build_collection_param(opts[:exclude], :csv) if !opts[:exclude].nil?
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -3080,7 +3080,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.users_id_timeline",
+        :operation => :'TweetsApi.users_id_timeline',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -3151,80 +3151,80 @@ module TwitterClient
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'since_id'].nil? && opts[:'since_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:since_id].nil? && opts[:since_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"since_id\"]' when calling TweetsApi.users_id_tweets, must conform to the pattern #{pattern}."
       end
 
       pattern = Regexp.new(/^[0-9]{1,19}$/)
-      if @api_client.config.client_side_validation && !opts[:'until_id'].nil? && opts[:'until_id'] !~ pattern
+      if @api_client.config.client_side_validation && !opts[:until_id].nil? && opts[:until_id] !~ pattern
         fail ArgumentError, "invalid value for 'opts[:\"until_id\"]' when calling TweetsApi.users_id_tweets, must conform to the pattern #{pattern}."
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] > 100
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] > 100
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.users_id_tweets, must be smaller than or equal to 100.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'max_results'].nil? && opts[:'max_results'] < 5
+      if @api_client.config.client_side_validation && !opts[:max_results].nil? && opts[:max_results] < 5
         fail ArgumentError, 'invalid value for "opts[:"max_results"]" when calling TweetsApi.users_id_tweets, must be greater than or equal to 5.'
       end
 
-      if @api_client.config.client_side_validation && !opts[:'pagination_token'].nil? && opts[:'pagination_token'].to_s.length < 1
+      if @api_client.config.client_side_validation && !opts[:pagination_token].nil? && opts[:pagination_token].to_s.length < 1
         fail ArgumentError, 'invalid value for "opts[:"pagination_token"]" when calling TweetsApi.users_id_tweets, the character length must be great than or equal to 1.'
       end
 
       allowable_values = ["replies", "retweets"]
-      if @api_client.config.client_side_validation && opts[:'exclude'] && !opts[:'exclude'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:exclude] && !opts[:exclude].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"exclude\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'exclude'].nil? && opts[:'exclude'].length < 1
+      if @api_client.config.client_side_validation && !opts[:exclude].nil? && opts[:exclude].length < 1
         fail ArgumentError, 'invalid value for "opts[:"exclude"]" when calling TweetsApi.users_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments", "author_id", "context_annotations", "conversation_id", "created_at", "edit_controls", "edit_history_tweet_ids", "entities", "geo", "id", "in_reply_to_user_id", "lang", "non_public_metrics", "organic_metrics", "possibly_sensitive", "promoted_metrics", "public_metrics", "referenced_tweets", "reply_settings", "source", "text", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'tweet_fields'] && !opts[:'tweet_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:tweet_fields] && !opts[:tweet_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"tweet_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'tweet_fields'].nil? && opts[:'tweet_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:tweet_fields].nil? && opts[:tweet_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"tweet_fields"]" when calling TweetsApi.users_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["attachments.media_keys", "attachments.poll_ids", "author_id", "edit_history_tweet_ids", "entities.mentions.username", "geo.place_id", "in_reply_to_user_id", "referenced_tweets.id", "referenced_tweets.id.author_id"]
-      if @api_client.config.client_side_validation && opts[:'expansions'] && !opts[:'expansions'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:expansions] && !opts[:expansions].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"expansions\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'expansions'].nil? && opts[:'expansions'].length < 1
+      if @api_client.config.client_side_validation && !opts[:expansions].nil? && opts[:expansions].length < 1
         fail ArgumentError, 'invalid value for "opts[:"expansions"]" when calling TweetsApi.users_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["alt_text", "duration_ms", "height", "media_key", "non_public_metrics", "organic_metrics", "preview_image_url", "promoted_metrics", "public_metrics", "type", "url", "variants", "width"]
-      if @api_client.config.client_side_validation && opts[:'media_fields'] && !opts[:'media_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:media_fields] && !opts[:media_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"media_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'media_fields'].nil? && opts[:'media_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:media_fields].nil? && opts[:media_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"media_fields"]" when calling TweetsApi.users_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["duration_minutes", "end_datetime", "id", "options", "voting_status"]
-      if @api_client.config.client_side_validation && opts[:'poll_fields'] && !opts[:'poll_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:poll_fields] && !opts[:poll_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"poll_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'poll_fields'].nil? && opts[:'poll_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:poll_fields].nil? && opts[:poll_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"poll_fields"]" when calling TweetsApi.users_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["created_at", "description", "entities", "id", "location", "name", "pinned_tweet_id", "profile_image_url", "protected", "public_metrics", "url", "username", "verified", "withheld"]
-      if @api_client.config.client_side_validation && opts[:'user_fields'] && !opts[:'user_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:user_fields] && !opts[:user_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"user_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'user_fields'].nil? && opts[:'user_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:user_fields].nil? && opts[:user_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"user_fields"]" when calling TweetsApi.users_id_tweets, number of items must be greater than or equal to 1.'
       end
 
       allowable_values = ["contained_within", "country", "country_code", "full_name", "geo", "id", "name", "place_type"]
-      if @api_client.config.client_side_validation && opts[:'place_fields'] && !opts[:'place_fields'].all? { |item| allowable_values.include?(item) }
+      if @api_client.config.client_side_validation && opts[:place_fields] && !opts[:place_fields].all? { |item| allowable_values.include?(item) }
         fail ArgumentError, "invalid value for \"place_fields\", must include one of #{allowable_values}"
       end
-      if @api_client.config.client_side_validation && !opts[:'place_fields'].nil? && opts[:'place_fields'].length < 1
+      if @api_client.config.client_side_validation && !opts[:place_fields].nil? && opts[:place_fields].length < 1
         fail ArgumentError, 'invalid value for "opts[:"place_fields"]" when calling TweetsApi.users_id_tweets, number of items must be greater than or equal to 1.'
       end
 
@@ -3233,19 +3233,19 @@ module TwitterClient
 
       # query parameters
       query_params = opts[:query_params] || {}
-      query_params[:'since_id'] = opts[:'since_id'] if !opts[:'since_id'].nil?
-      query_params[:'until_id'] = opts[:'until_id'] if !opts[:'until_id'].nil?
-      query_params[:'max_results'] = opts[:'max_results'] if !opts[:'max_results'].nil?
-      query_params[:'pagination_token'] = opts[:'pagination_token'] if !opts[:'pagination_token'].nil?
-      query_params[:'exclude'] = @api_client.build_collection_param(opts[:'exclude'], :csv) if !opts[:'exclude'].nil?
-      query_params[:'start_time'] = opts[:'start_time'] if !opts[:'start_time'].nil?
-      query_params[:'end_time'] = opts[:'end_time'] if !opts[:'end_time'].nil?
-      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:'tweet_fields'], :csv) if !opts[:'tweet_fields'].nil?
-      query_params[:'expansions'] = @api_client.build_collection_param(opts[:'expansions'], :csv) if !opts[:'expansions'].nil?
-      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:'media_fields'], :csv) if !opts[:'media_fields'].nil?
-      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:'poll_fields'], :csv) if !opts[:'poll_fields'].nil?
-      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:'user_fields'], :csv) if !opts[:'user_fields'].nil?
-      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:'place_fields'], :csv) if !opts[:'place_fields'].nil?
+      query_params[:since_id] = opts[:since_id] if !opts[:since_id].nil?
+      query_params[:until_id] = opts[:until_id] if !opts[:until_id].nil?
+      query_params[:max_results] = opts[:max_results] if !opts[:max_results].nil?
+      query_params[:pagination_token] = opts[:pagination_token] if !opts[:pagination_token].nil?
+      query_params[:exclude] = @api_client.build_collection_param(opts[:exclude], :csv) if !opts[:exclude].nil?
+      query_params[:start_time] = opts[:start_time] if !opts[:start_time].nil?
+      query_params[:end_time] = opts[:end_time] if !opts[:end_time].nil?
+      query_params[:'tweet.fields'] = @api_client.build_collection_param(opts[:tweet_fields], :csv) if !opts[:tweet_fields].nil?
+      query_params[:expansions] = @api_client.build_collection_param(opts[:expansions], :csv) if !opts[:expansions].nil?
+      query_params[:'media.fields'] = @api_client.build_collection_param(opts[:media_fields], :csv) if !opts[:media_fields].nil?
+      query_params[:'poll.fields'] = @api_client.build_collection_param(opts[:poll_fields], :csv) if !opts[:poll_fields].nil?
+      query_params[:'user.fields'] = @api_client.build_collection_param(opts[:user_fields], :csv) if !opts[:user_fields].nil?
+      query_params[:'place.fields'] = @api_client.build_collection_param(opts[:place_fields], :csv) if !opts[:place_fields].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -3265,7 +3265,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['BearerToken', 'OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.users_id_tweets",
+        :operation => :'TweetsApi.users_id_tweets',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -3339,7 +3339,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.users_id_unlike",
+        :operation => :'TweetsApi.users_id_unlike',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -3413,7 +3413,7 @@ module TwitterClient
       auth_names = opts[:debug_auth_names] || ['OAuth2UserToken', 'UserToken']
 
       new_options = opts.merge(
-        :operation => :"TweetsApi.users_id_unretweets",
+        :operation => :'TweetsApi.users_id_unretweets',
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,

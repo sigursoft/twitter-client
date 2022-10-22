@@ -69,17 +69,17 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'card_uri' => :'card_uri',
-        :'direct_message_deep_link' => :'direct_message_deep_link',
-        :'for_super_followers_only' => :'for_super_followers_only',
-        :'geo' => :'geo',
-        :'media' => :'media',
-        :'nullcast' => :'nullcast',
-        :'poll' => :'poll',
-        :'quote_tweet_id' => :'quote_tweet_id',
-        :'reply' => :'reply',
-        :'reply_settings' => :'reply_settings',
-        :'text' => :'text'
+        :card_uri => :card_uri,
+        :direct_message_deep_link => :direct_message_deep_link,
+        :for_super_followers_only => :for_super_followers_only,
+        :geo => :geo,
+        :media => :media,
+        :nullcast => :nullcast,
+        :poll => :poll,
+        :quote_tweet_id => :quote_tweet_id,
+        :reply => :reply,
+        :reply_settings => :reply_settings,
+        :text => :text
       }
     end
 
@@ -91,17 +91,17 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'card_uri' => :'String',
-        :'direct_message_deep_link' => :'String',
-        :'for_super_followers_only' => :'Boolean',
-        :'geo' => :'TweetCreateRequestGeo',
-        :'media' => :'TweetCreateRequestMedia',
-        :'nullcast' => :'Boolean',
-        :'poll' => :'TweetCreateRequestPoll',
-        :'quote_tweet_id' => :'String',
-        :'reply' => :'TweetCreateRequestReply',
-        :'reply_settings' => :'String',
-        :'text' => :'String'
+        :card_uri => :String,
+        :direct_message_deep_link => :String,
+        :for_super_followers_only => :Boolean,
+        :geo => :TweetCreateRequestGeo,
+        :media => :TweetCreateRequestMedia,
+        :nullcast => :Boolean,
+        :poll => :TweetCreateRequestPoll,
+        :quote_tweet_id => :String,
+        :reply => :TweetCreateRequestReply,
+        :reply_settings => :String,
+        :text => :String
       }
     end
 
@@ -126,52 +126,52 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'card_uri')
-        self.card_uri = attributes[:'card_uri']
+      if attributes.key?(:card_uri)
+        self.card_uri = attributes[:card_uri]
       end
 
-      if attributes.key?(:'direct_message_deep_link')
-        self.direct_message_deep_link = attributes[:'direct_message_deep_link']
+      if attributes.key?(:direct_message_deep_link)
+        self.direct_message_deep_link = attributes[:direct_message_deep_link]
       end
 
-      if attributes.key?(:'for_super_followers_only')
-        self.for_super_followers_only = attributes[:'for_super_followers_only']
+      if attributes.key?(:for_super_followers_only)
+        self.for_super_followers_only = attributes[:for_super_followers_only]
       else
         self.for_super_followers_only = false
       end
 
-      if attributes.key?(:'geo')
-        self.geo = attributes[:'geo']
+      if attributes.key?(:geo)
+        self.geo = attributes[:geo]
       end
 
-      if attributes.key?(:'media')
-        self.media = attributes[:'media']
+      if attributes.key?(:media)
+        self.media = attributes[:media]
       end
 
-      if attributes.key?(:'nullcast')
-        self.nullcast = attributes[:'nullcast']
+      if attributes.key?(:nullcast)
+        self.nullcast = attributes[:nullcast]
       else
         self.nullcast = false
       end
 
-      if attributes.key?(:'poll')
-        self.poll = attributes[:'poll']
+      if attributes.key?(:poll)
+        self.poll = attributes[:poll]
       end
 
-      if attributes.key?(:'quote_tweet_id')
-        self.quote_tweet_id = attributes[:'quote_tweet_id']
+      if attributes.key?(:quote_tweet_id)
+        self.quote_tweet_id = attributes[:quote_tweet_id]
       end
 
-      if attributes.key?(:'reply')
-        self.reply = attributes[:'reply']
+      if attributes.key?(:reply)
+        self.reply = attributes[:reply]
       end
 
-      if attributes.key?(:'reply_settings')
-        self.reply_settings = attributes[:'reply_settings']
+      if attributes.key?(:reply_settings)
+        self.reply_settings = attributes[:reply_settings]
       end
 
-      if attributes.key?(:'text')
-        self.text = attributes[:'text']
+      if attributes.key?(:text)
+        self.text = attributes[:text]
       end
     end
 

@@ -27,9 +27,9 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'editable_until' => :'editable_until',
-        :'edits_remaining' => :'edits_remaining',
-        :'is_edit_eligible' => :'is_edit_eligible'
+        :editable_until => :editable_until,
+        :edits_remaining => :edits_remaining,
+        :is_edit_eligible => :is_edit_eligible
       }
     end
 
@@ -41,9 +41,9 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'editable_until' => :'Time',
-        :'edits_remaining' => :'Integer',
-        :'is_edit_eligible' => :'Boolean'
+        :editable_until => :Time,
+        :edits_remaining => :Integer,
+        :is_edit_eligible => :Boolean
       }
     end
 
@@ -68,16 +68,16 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'editable_until')
-        self.editable_until = attributes[:'editable_until']
+      if attributes.key?(:editable_until)
+        self.editable_until = attributes[:editable_until]
       end
 
-      if attributes.key?(:'edits_remaining')
-        self.edits_remaining = attributes[:'edits_remaining']
+      if attributes.key?(:edits_remaining)
+        self.edits_remaining = attributes[:edits_remaining]
       end
 
-      if attributes.key?(:'is_edit_eligible')
-        self.is_edit_eligible = attributes[:'is_edit_eligible']
+      if attributes.key?(:is_edit_eligible)
+        self.is_edit_eligible = attributes[:is_edit_eligible]
       end
     end
 

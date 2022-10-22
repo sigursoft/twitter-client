@@ -27,10 +27,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'event_at' => :'event_at',
-        :'new_value' => :'new_value',
-        :'profile_field' => :'profile_field',
-        :'user' => :'user'
+        :event_at => :event_at,
+        :new_value => :new_value,
+        :profile_field => :profile_field,
+        :user => :user
       }
     end
 
@@ -42,10 +42,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'event_at' => :'Time',
-        :'new_value' => :'String',
-        :'profile_field' => :'String',
-        :'user' => :'UserComplianceSchemaUser'
+        :event_at => :Time,
+        :new_value => :String,
+        :profile_field => :String,
+        :user => :UserComplianceSchemaUser
       }
     end
 
@@ -70,20 +70,20 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'event_at')
-        self.event_at = attributes[:'event_at']
+      if attributes.key?(:event_at)
+        self.event_at = attributes[:event_at]
       end
 
-      if attributes.key?(:'new_value')
-        self.new_value = attributes[:'new_value']
+      if attributes.key?(:new_value)
+        self.new_value = attributes[:new_value]
       end
 
-      if attributes.key?(:'profile_field')
-        self.profile_field = attributes[:'profile_field']
+      if attributes.key?(:profile_field)
+        self.profile_field = attributes[:profile_field]
       end
 
-      if attributes.key?(:'user')
-        self.user = attributes[:'user']
+      if attributes.key?(:user)
+        self.user = attributes[:user]
       end
     end
 

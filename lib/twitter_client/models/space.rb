@@ -92,23 +92,23 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'created_at' => :'created_at',
-        :'creator_id' => :'creator_id',
-        :'ended_at' => :'ended_at',
-        :'host_ids' => :'host_ids',
-        :'id' => :'id',
-        :'invited_user_ids' => :'invited_user_ids',
-        :'is_ticketed' => :'is_ticketed',
-        :'lang' => :'lang',
-        :'participant_count' => :'participant_count',
-        :'scheduled_start' => :'scheduled_start',
-        :'speaker_ids' => :'speaker_ids',
-        :'started_at' => :'started_at',
-        :'state' => :'state',
-        :'subscriber_count' => :'subscriber_count',
-        :'title' => :'title',
-        :'topics' => :'topics',
-        :'updated_at' => :'updated_at'
+        :created_at => :created_at,
+        :creator_id => :creator_id,
+        :ended_at => :ended_at,
+        :host_ids => :host_ids,
+        :id => :id,
+        :invited_user_ids => :invited_user_ids,
+        :is_ticketed => :is_ticketed,
+        :lang => :lang,
+        :participant_count => :participant_count,
+        :scheduled_start => :scheduled_start,
+        :speaker_ids => :speaker_ids,
+        :started_at => :started_at,
+        :state => :state,
+        :subscriber_count => :subscriber_count,
+        :title => :title,
+        :topics => :topics,
+        :updated_at => :updated_at
       }
     end
 
@@ -120,23 +120,23 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'created_at' => :'Time',
-        :'creator_id' => :'String',
-        :'ended_at' => :'Time',
-        :'host_ids' => :'Array<String>',
-        :'id' => :'String',
-        :'invited_user_ids' => :'Array<String>',
-        :'is_ticketed' => :'Boolean',
-        :'lang' => :'String',
-        :'participant_count' => :'Integer',
-        :'scheduled_start' => :'Time',
-        :'speaker_ids' => :'Array<String>',
-        :'started_at' => :'Time',
-        :'state' => :'String',
-        :'subscriber_count' => :'Integer',
-        :'title' => :'String',
-        :'topics' => :'Array<SpaceTopicsInner>',
-        :'updated_at' => :'Time'
+        :created_at => :Time,
+        :creator_id => :String,
+        :ended_at => :Time,
+        :host_ids => :'Array<String>',
+        :id => :String,
+        :invited_user_ids => :'Array<String>',
+        :is_ticketed => :Boolean,
+        :lang => :String,
+        :participant_count => :Integer,
+        :scheduled_start => :Time,
+        :speaker_ids => :'Array<String>',
+        :started_at => :Time,
+        :state => :String,
+        :subscriber_count => :Integer,
+        :title => :String,
+        :topics => :'Array<SpaceTopicsInner>',
+        :updated_at => :Time
       }
     end
 
@@ -161,80 +161,80 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'created_at')
-        self.created_at = attributes[:'created_at']
+      if attributes.key?(:created_at)
+        self.created_at = attributes[:created_at]
       end
 
-      if attributes.key?(:'creator_id')
-        self.creator_id = attributes[:'creator_id']
+      if attributes.key?(:creator_id)
+        self.creator_id = attributes[:creator_id]
       end
 
-      if attributes.key?(:'ended_at')
-        self.ended_at = attributes[:'ended_at']
+      if attributes.key?(:ended_at)
+        self.ended_at = attributes[:ended_at]
       end
 
-      if attributes.key?(:'host_ids')
-        if (value = attributes[:'host_ids']).is_a?(Array)
+      if attributes.key?(:host_ids)
+        if (value = attributes[:host_ids]).is_a?(Array)
           self.host_ids = value
         end
       end
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.key?(:id)
+        self.id = attributes[:id]
       end
 
-      if attributes.key?(:'invited_user_ids')
-        if (value = attributes[:'invited_user_ids']).is_a?(Array)
+      if attributes.key?(:invited_user_ids)
+        if (value = attributes[:invited_user_ids]).is_a?(Array)
           self.invited_user_ids = value
         end
       end
 
-      if attributes.key?(:'is_ticketed')
-        self.is_ticketed = attributes[:'is_ticketed']
+      if attributes.key?(:is_ticketed)
+        self.is_ticketed = attributes[:is_ticketed]
       end
 
-      if attributes.key?(:'lang')
-        self.lang = attributes[:'lang']
+      if attributes.key?(:lang)
+        self.lang = attributes[:lang]
       end
 
-      if attributes.key?(:'participant_count')
-        self.participant_count = attributes[:'participant_count']
+      if attributes.key?(:participant_count)
+        self.participant_count = attributes[:participant_count]
       end
 
-      if attributes.key?(:'scheduled_start')
-        self.scheduled_start = attributes[:'scheduled_start']
+      if attributes.key?(:scheduled_start)
+        self.scheduled_start = attributes[:scheduled_start]
       end
 
-      if attributes.key?(:'speaker_ids')
-        if (value = attributes[:'speaker_ids']).is_a?(Array)
+      if attributes.key?(:speaker_ids)
+        if (value = attributes[:speaker_ids]).is_a?(Array)
           self.speaker_ids = value
         end
       end
 
-      if attributes.key?(:'started_at')
-        self.started_at = attributes[:'started_at']
+      if attributes.key?(:started_at)
+        self.started_at = attributes[:started_at]
       end
 
-      if attributes.key?(:'state')
-        self.state = attributes[:'state']
+      if attributes.key?(:state)
+        self.state = attributes[:state]
       end
 
-      if attributes.key?(:'subscriber_count')
-        self.subscriber_count = attributes[:'subscriber_count']
+      if attributes.key?(:subscriber_count)
+        self.subscriber_count = attributes[:subscriber_count]
       end
 
-      if attributes.key?(:'title')
-        self.title = attributes[:'title']
+      if attributes.key?(:title)
+        self.title = attributes[:title]
       end
 
-      if attributes.key?(:'topics')
-        if (value = attributes[:'topics']).is_a?(Array)
+      if attributes.key?(:topics)
+        if (value = attributes[:topics]).is_a?(Array)
           self.topics = value
         end
       end
 
-      if attributes.key?(:'updated_at')
-        self.updated_at = attributes[:'updated_at']
+      if attributes.key?(:updated_at)
+        self.updated_at = attributes[:updated_at]
       end
     end
 

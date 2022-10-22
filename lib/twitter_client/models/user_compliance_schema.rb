@@ -23,8 +23,8 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'event_at' => :'event_at',
-        :'user' => :'user'
+        :event_at => :event_at,
+        :user => :user
       }
     end
 
@@ -36,8 +36,8 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'event_at' => :'Time',
-        :'user' => :'UserComplianceSchemaUser'
+        :event_at => :Time,
+        :user => :UserComplianceSchemaUser
       }
     end
 
@@ -62,12 +62,12 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'event_at')
-        self.event_at = attributes[:'event_at']
+      if attributes.key?(:event_at)
+        self.event_at = attributes[:event_at]
       end
 
-      if attributes.key?(:'user')
-        self.user = attributes[:'user']
+      if attributes.key?(:user)
+        self.user = attributes[:user]
       end
     end
 

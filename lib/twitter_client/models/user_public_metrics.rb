@@ -31,10 +31,10 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'followers_count' => :'followers_count',
-        :'following_count' => :'following_count',
-        :'listed_count' => :'listed_count',
-        :'tweet_count' => :'tweet_count'
+        :followers_count => :followers_count,
+        :following_count => :following_count,
+        :listed_count => :listed_count,
+        :tweet_count => :tweet_count
       }
     end
 
@@ -46,10 +46,10 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'followers_count' => :'Integer',
-        :'following_count' => :'Integer',
-        :'listed_count' => :'Integer',
-        :'tweet_count' => :'Integer'
+        :followers_count => :Integer,
+        :following_count => :Integer,
+        :listed_count => :Integer,
+        :tweet_count => :Integer
       }
     end
 
@@ -74,20 +74,20 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'followers_count')
-        self.followers_count = attributes[:'followers_count']
+      if attributes.key?(:followers_count)
+        self.followers_count = attributes[:followers_count]
       end
 
-      if attributes.key?(:'following_count')
-        self.following_count = attributes[:'following_count']
+      if attributes.key?(:following_count)
+        self.following_count = attributes[:following_count]
       end
 
-      if attributes.key?(:'listed_count')
-        self.listed_count = attributes[:'listed_count']
+      if attributes.key?(:listed_count)
+        self.listed_count = attributes[:listed_count]
       end
 
-      if attributes.key?(:'tweet_count')
-        self.tweet_count = attributes[:'tweet_count']
+      if attributes.key?(:tweet_count)
+        self.tweet_count = attributes[:tweet_count]
       end
     end
 

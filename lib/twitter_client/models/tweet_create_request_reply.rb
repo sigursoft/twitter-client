@@ -25,8 +25,8 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'exclude_reply_user_ids' => :'exclude_reply_user_ids',
-        :'in_reply_to_tweet_id' => :'in_reply_to_tweet_id'
+        :exclude_reply_user_ids => :exclude_reply_user_ids,
+        :in_reply_to_tweet_id => :in_reply_to_tweet_id
       }
     end
 
@@ -38,8 +38,8 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'exclude_reply_user_ids' => :'Array<String>',
-        :'in_reply_to_tweet_id' => :'String'
+        :exclude_reply_user_ids => :'Array<String>',
+        :in_reply_to_tweet_id => :String
       }
     end
 
@@ -64,14 +64,14 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'exclude_reply_user_ids')
-        if (value = attributes[:'exclude_reply_user_ids']).is_a?(Array)
+      if attributes.key?(:exclude_reply_user_ids)
+        if (value = attributes[:exclude_reply_user_ids]).is_a?(Array)
           self.exclude_reply_user_ids = value
         end
       end
 
-      if attributes.key?(:'in_reply_to_tweet_id')
-        self.in_reply_to_tweet_id = attributes[:'in_reply_to_tweet_id']
+      if attributes.key?(:in_reply_to_tweet_id)
+        self.in_reply_to_tweet_id = attributes[:in_reply_to_tweet_id]
       end
     end
 

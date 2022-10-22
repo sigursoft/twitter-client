@@ -20,7 +20,7 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'muting' => :'muting'
+        :muting => :muting
       }
     end
 
@@ -32,7 +32,7 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'muting' => :'Boolean'
+        :muting => :Boolean
       }
     end
 
@@ -57,8 +57,8 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'muting')
-        self.muting = attributes[:'muting']
+      if attributes.key?(:muting)
+        self.muting = attributes[:muting]
       end
     end
 

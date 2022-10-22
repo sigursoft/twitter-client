@@ -46,8 +46,8 @@ module TwitterClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'coordinates' => :'coordinates',
-        :'type' => :'type'
+        :coordinates => :coordinates,
+        :type => :type
       }
     end
 
@@ -59,8 +59,8 @@ module TwitterClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'coordinates' => :'Array<Float>',
-        :'type' => :'String'
+        :coordinates => :'Array<Float>',
+        :type => :String
       }
     end
 
@@ -85,14 +85,14 @@ module TwitterClient
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'coordinates')
-        if (value = attributes[:'coordinates']).is_a?(Array)
+      if attributes.key?(:coordinates)
+        if (value = attributes[:coordinates]).is_a?(Array)
           self.coordinates = value
         end
       end
 
-      if attributes.key?(:'type')
-        self.type = attributes[:'type']
+      if attributes.key?(:type)
+        self.type = attributes[:type]
       end
     end
 
