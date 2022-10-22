@@ -97,7 +97,7 @@ module TwitterClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [scrub_geo].hash
+      scrub_geo.hash
     end
 
     # Builds the object from hash

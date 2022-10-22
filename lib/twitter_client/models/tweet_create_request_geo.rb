@@ -93,7 +93,7 @@ module TwitterClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [place_id].hash
+      place_id.hash
     end
 
     # Builds the object from hash

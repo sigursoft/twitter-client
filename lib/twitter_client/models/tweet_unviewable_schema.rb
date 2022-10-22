@@ -97,7 +97,7 @@ module TwitterClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [public_tweet_unviewable].hash
+      public_tweet_unviewable.hash
     end
 
     # Builds the object from hash

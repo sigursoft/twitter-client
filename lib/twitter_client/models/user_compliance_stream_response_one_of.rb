@@ -98,7 +98,7 @@ module TwitterClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [data].hash
+      data.hash
     end
 
     # Builds the object from hash
