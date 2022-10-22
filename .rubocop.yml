@@ -1,7 +1,7 @@
 inherit_from: .rubocop_todo.yml
 
 AllCops:
-  NewCops: false
+  NewCops: enable
   Exclude:
     - 'vendor/**/*'
     - 'spec/fixtures/**/*'
